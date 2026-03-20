@@ -1,0 +1,11 @@
+company_name,contact_name,title,industry,company_size,recent_signal,website_visits_last_30_days,current_solution,notes
+Apex Precision Manufacturing,Diana Ruiz,Director of Facilities,Manufacturing,850,Posted job for Maintenance Coordinator,47,Spreadsheets + paper work orders,Team managing 3 plants; mentioned pain around reactive maintenance in LinkedIn comment
+Riverfront Cold Storage,Marcus Webb,VP of Operations,Facilities Management,320,None,12,Legacy CMMS (Maximo),Contract renewal on their current system coming up in Q3; may be open to switching
+BrightPath Surgical,Tamara Chen,Facilities Manager,Healthcare,1200,Evaluated two CMMS vendors in past 60 days,89,Unknown,High site engagement; healthcare compliance is a known pain point for this segment
+Summit Retail Group,Jordan Blake,Regional Store Manager,Retail,2800,None,3,Point of sale system,Multi-location retail; no maintenance ops mandate and wrong buyer title
+Vanguard Logistics LLC,Keith Odom,Plant Manager,Logistics / Warehousing,670,LinkedIn post about "digitizing our maintenance workflow",31,Excel + email,Direct signal: publicly posted about the pain we solve
+Clearwater Municipal Utilities,Sandra Howell,Infrastructure Manager,Government / Utilities,410,RFP posted for CMMS software,58,Home-built tracking tool,Active RFP in market — highly motivated but gov procurement is slow
+Nova Snack Co.,Brian Tran,Head of Manufacturing Ops,Manufacturing,290,Hired new Maintenance Supervisor last month,19,Nothing formal,Small but growing food manufacturer; new hire suggests they are building out maintenance function
+Pinnacle SaaS Corp,Emily Vargas,Head of Customer Success,SaaS / Technology,180,None,2,Salesforce,Completely off ICP — software company with no facilities or maintenance use case
+Hartwell Paper & Packaging,Robert Kim,Maintenance Manager,Manufacturing,1500,Attended ____ webinar last week,74,IBM Maximo (outdated version),Very warm — attended our content; Maximo pain is well documented in the market
+Cascade Property Services,Nia Foster,Operations Director,Facilities Management,230,None,8,ServiceChannel,Mid-market FM company; right buyer and industry but no active signal yet
