@@ -23,7 +23,7 @@ Hot leads get a full email draft. Warm and Cold leads get a score and reason onl
 ### 1. Clone and enter the project
 
 ```bash
-cd gtm-brain
+cd gtm-lead-scoring-engine
 ```
 
 ### 2. Create a virtual environment
