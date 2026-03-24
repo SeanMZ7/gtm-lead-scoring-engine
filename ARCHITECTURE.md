@@ -1,4 +1,4 @@
-# ARCHITECTURE.md — GTM Brain
+# ARCHITECTURE.md
 
 ---
 
