@@ -1,4 +1,4 @@
-# PROBLEM_STATEMENT.md — GTM Brain
+# PROBLEM_STATEMENT.md 
 
 ---
 
