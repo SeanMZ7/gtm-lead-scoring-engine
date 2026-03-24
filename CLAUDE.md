@@ -1,4 +1,4 @@
-# CLAUDE.md — GTM Brain
+# CLAUDE.md
 
 ## Project Purpose
 
