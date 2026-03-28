@@ -57,6 +57,7 @@ The email should:
 - Include a soft CTA (15-min call, not a demo push)
 - Sound like a human wrote it — no buzzword soup
 - Sign off with [Your Name] — never use "Team" or any other signature
+- Don't ever use 'em-dash (—) in the email.
 
 Return only the JSON object. No preamble, no explanation outside the JSON.
 
