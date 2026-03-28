@@ -1,5 +1,5 @@
 .env
 __pycache__/
 *.pyc
-outputs/scored_leads.csv
 *.code-workspace
+.DS_Store
