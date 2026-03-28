@@ -1,0 +1,134 @@
+lead_type,company_name,contact_name,title,industry,company_size,recent_signal,website_visits_last_30_days,current_solution,notes,fit_score,engagement_score,routing_action,reason,outreach_draft,days_since_signup,sessions_last_7_days,sessions_last_30_days,avg_session_duration_minutes,features_activated,total_features_available,key_milestones_hit,team_members_invited,mobile_app_used,last_active_days_ago,work_orders_created,pm_schedules_created,assets_added,reports_run,integrations_attempted,inbound_source,country
+Inbound/Outbound Lead,Apex Precision Manufacturing,Diana Ruiz,Director of Facilities,Manufacturing,850,Posted job for Maintenance Coordinator,47,Spreadsheets + paper work orders,Team managing 3 plants; mentioned pain around reactive maintenance in LinkedIn comment,Hot,N/A,Route to AE via ChiliPiper,"Diana is a Director of Facilities at a mid-market manufacturer using spreadsheets with a live job posting for a Maintenance Coordinator, 47 website visits, and a public LinkedIn comment citing reactive maintenance pain -- multiple strong buying signals aligned with core ICP.","Subject: Apex Precision -- getting ahead of reactive maintenance across 3 plants
+
+Hi Diana,
+
+I saw your comment about reactive maintenance challenges and noticed Apex is hiring a Maintenance Coordinator -- it sounds like your team is feeling the pressure of keeping three plants running without the right systems in place.
+
+We help facilities teams like yours move from spreadsheets and paper work orders to a proactive maintenance workflow, so problems get caught before they become costly downtime.
+
+Would you have 15 minutes this week to see how other mid-market manufacturers have made that shift?
+
+[Your Name]",,,,,,,,,,,,,,,,,
+Inbound/Outbound Lead,Riverfront Cold Storage,Marcus Webb,VP of Operations,Facilities Management,320,None,12,Legacy CMMS (Maximo),Contract renewal on their current system coming up in Q3; may be open to switching,Hot,N/A,Route to AE via ChiliPiper,"Marcus is a VP of Operations at a 320-person facilities management company using a legacy CMMS (Maximo) with a Q3 contract renewal approaching, representing a direct switching opportunity with strong timing and ICP alignment.","Subject: Riverfront's Maximo Renewal -- Worth a Quick Look Before Q3?
+
+Hi Marcus,
+
+With Riverfront's Maximo contract renewal coming up in Q3, now is a natural time to evaluate whether your current setup is still the right fit for your team.
+
+A lot of operations leaders we talk to in facilities management find that Maximo is powerful but heavy -- expensive to maintain, slow to configure, and built for a different era of maintenance management.
+
+We help mid-sized teams like yours modernize without the implementation headache. Would 15 minutes be worth it to see what that could look like for Riverfront?
+
+[Your Name]",,,,,,,,,,,,,,,,,
+Inbound/Outbound Lead,BrightPath Surgical,Tamara Chen,Facilities Manager,Healthcare,1200,Evaluated two CMMS vendors in past 60 days,89,Unknown,High site engagement; healthcare compliance is a known pain point for this segment,Hot,N/A,Route to AE via ChiliPiper,"Tamara is a Facilities Manager at a 1,200-person healthcare company, squarely within ICP, and has evaluated two CMMS vendors in the past 60 days alongside 89 website visits, indicating active buying intent.","Subject: BrightPath Surgical + AI-Powered CMMS for Healthcare Compliance
+
+Hi Tamara,
+
+I noticed BrightPath Surgical has been exploring CMMS solutions recently, and given the compliance pressures facilities teams face in healthcare, the timing felt worth a quick note.
+
+Maintaining audit-ready maintenance records, managing preventive schedules across critical equipment, and staying ahead of Joint Commission requirements is a heavy lift, especially without the right system in place.
+
+We help facilities teams at healthcare organizations like yours automate those workflows and stay inspection-ready without the manual scramble.
+
+Would a 15-minute call this week make sense to see if we could be a fit?
+
+Best,
+[Your Name]",,,,,,,,,,,,,,,,,
+Inbound/Outbound Lead,Summit Retail Group,Jordan Blake,Regional Store Manager,Retail,2800,None,3,Point of sale system,Multi-location retail; no maintenance ops mandate and wrong buyer title,Cold,N/A,Suppress from active outreach,"Jordan Blake is a Regional Store Manager in retail, which is a disqualified industry, exceeds the company size ceiling, has no maintenance ops mandate, and shows no relevant buying signals.",,,,,,,,,,,,,,,,,,
+Inbound/Outbound Lead,Vanguard Logistics LLC,Keith Odom,Plant Manager,Logistics / Warehousing,670,"LinkedIn post about ""digitizing our maintenance workflow""",31,Excel + email,Direct signal: publicly posted about the pain we solve,Hot,N/A,Route to AE via ChiliPiper,"Keith is a Plant Manager at a 670-person logistics company currently using Excel and email for maintenance, and he publicly posted on LinkedIn about digitizing their maintenance workflow, which is a direct and explicit signal for the exact pain our platform solves.","Subject: Digitizing Maintenance at Vanguard Logistics
+
+Hi Keith,
+
+I saw your LinkedIn post about digitizing Vanguard's maintenance workflow and wanted to reach out. Managing maintenance on Excel and email at your scale means work orders fall through the cracks, PMs get missed, and your team spends more time chasing information than fixing equipment.
+
+We help plant managers like you replace that patchwork with an AI-powered CMMS built for logistics and warehousing operations. Teams typically cut unplanned downtime and get full asset visibility within the first 60 days.
+
+Worth a 15-minute call to see if it fits what you're building toward?
+
+[Your Name]",,,,,,,,,,,,,,,,,
+Inbound/Outbound Lead,Clearwater Municipal Utilities,Sandra Howell,Infrastructure Manager,Government / Utilities,410,RFP posted for CMMS software,58,Home-built tracking tool,Active RFP in market — highly motivated but gov procurement is slow,Cold,N/A,Suppress from active outreach,"Despite a strong buying signal (active CMMS RFP) and relevant title, Clearwater Municipal Utilities falls squarely in the government sector, which is an explicit disqualifier due to slow procurement cycles and poor deal-path fit for our mid-market motion.",,,,,,,,,,,,,,,,,,
+Inbound/Outbound Lead,Nova Snack Co.,Brian Tran,Head of Manufacturing Ops,Manufacturing,290,Hired new Maintenance Supervisor last month,19,Nothing formal,Small but growing food manufacturer; new hire suggests they are building out maintenance function,Hot,N/A,Route to AE via ChiliPiper,"Brian holds a direct decision-making title in manufacturing, Nova Snack Co. falls squarely in the ICP size range with no formal CMMS in place, and the recent Maintenance Supervisor hire is a clear signal they are actively building out a maintenance function that will need infrastructure.","Subject: Building out maintenance at Nova Snack Co.? A few thoughts
+
+Hi Brian,
+
+I noticed Nova Snack Co. recently brought on a new Maintenance Supervisor. That kind of hire usually signals a real push to get maintenance operations structured and scalable.
+
+The challenge we hear from growing food manufacturers at that stage is managing work orders, asset history, and PM schedules without a real system in place. Spreadsheets and tribal knowledge only stretch so far before things start slipping.
+
+We help teams like yours get organized fast with an AI-powered CMMS built for mid-market manufacturers. Worth a 15-minute call to see if it fits?
+
+[Your Name]",,,,,,,,,,,,,,,,,
+Inbound/Outbound Lead,Pinnacle SaaS Corp,Emily Vargas,Head of Customer Success,SaaS / Technology,180,None,2,Salesforce,Completely off ICP — software company with no facilities or maintenance use case,Cold,N/A,Suppress from active outreach,"Emily's role in Customer Success at a SaaS/Technology company is a direct disqualifier on both industry and title, with no maintenance or facilities use case and zero buying signals present.",,,,,,,,,,,,,,,,,,
+Inbound/Outbound Lead,Hartwell Paper & Packaging,Robert Kim,Maintenance Manager,Manufacturing,1500,Attended ____ webinar last week,74,IBM Maximo (outdated version),Very warm — attended our content; Maximo pain is well documented in the market,Hot,N/A,Route to AE via ChiliPiper,"Robert is a Maintenance Manager at a 1,500-person manufacturer running an outdated Maximo instance, attended our webinar last week, and logged 74 website visits in 30 days — strong ICP fit with multiple compounding buying signals.","Subject: Hartwell Paper + modernizing beyond Maximo
+
+Hi Robert,
+
+Thanks for joining our webinar last week. Given your role managing maintenance at Hartwell Paper, I imagine you know firsthand how much Maximo can slow teams down when it's running on an outdated version. Workarounds stack up, visibility suffers, and your team ends up fighting the system instead of keeping assets running.
+
+We help maintenance managers at manufacturers like Hartwell replace that friction with AI-driven workflows that actually match how your team operates.
+
+Worth a 15-minute conversation to see if it's a fit?
+
+[Your Name]",,,,,,,,,,,,,,,,,
+Inbound/Outbound Lead,Cascade Property Services,Nia Foster,Operations Director,Facilities Management,230,None,8,ServiceChannel,Mid-market FM company; right buyer and industry but no active signal yet,Warm,N/A,Enroll in BDR sequence via Outreach,"Nia is a strong ICP match as an Operations Director at a mid-market FM company, but ServiceChannel is an existing formal solution rather than a legacy gap, and no active buying signal has been detected despite 8 recent website visits.",,,,,,,,,,,,,,,,,,
+Free Trial User,Apex Fabrication Co.,Danny Marsh,Director of Maintenance,Manufacturing,620,,,Spreadsheets,,High,High,Route to AE via ChiliPiper,"Danny Marsh is a Director of Maintenance at a 620-person manufacturer who has logged 12 sessions in the last 7 days, activated 6 features, created 47 work orders and 3 PM schedules, invited 4 team members, and was active just 1 day ago — signaling deep, multi-user trial adoption with strong conversion readiness.",,8,12,31,18,6,10,Work order created + first PM scheduled + asset added,4,Yes,1,47,3,22,5,1,Google Ads,US
+Free Trial User,Bluestone Cold Storage,Rachel Kim,VP of Operations,Facilities Management,410,,,Legacy CMMS (Maximo),,High,Low,Enroll in BDR sequence via Outreach,"Rachel is a VP of Operations at a 410-person facilities management company (strong ICP fit), but trial activity is shallow -- only 2 sessions in the last 7 days, 2 features activated, no PM schedules, and last active 6 days ago, signaling she has stalled early in the trial.","Subject: Quick question about your Bluestone trial
+
+Hi Rachel,
+
+I noticed you created a few work orders in your Bluestone Cold Storage trial -- good first step. It looks like things may have slowed down a bit since then, and I wanted to reach out before the trial window closes.
+
+A lot of teams coming from Maximo tell us the hardest part is just getting past the initial setup and seeing how the day-to-day actually feels different. That usually takes one focused session to click.
+
+Would you be open to a 15-minute call this week? I can walk you through a few things that tend to be most valuable for operations teams your size -- PM scheduling in particular tends to be a quick win that Maximo users notice right away.
+
+No pressure either way -- just want to make sure you get something useful out of the trial.
+
+[Your Name]",14,2,6,4,2,10,Work order created,1,No,6,4,0,3,0,0,LinkedIn Ads,US
+Free Trial User,Hargrove Packaging Ltd.,Tom Osei,Plant Manager,Manufacturing,880,,,Spreadsheets,,High,Low,Enroll in BDR sequence via Outreach,"Tom is a Plant Manager at an 880-person U.S. manufacturer — strong ICP fit — but has logged only 3 sessions in 30 days, 1 feature activated, and has been inactive for 14 days, signaling a stalled trial.","Subject: Quick question about your trial, Tom
+
+Hi Tom,
+
+I noticed you created a work order in Hargrove Packaging's trial a couple of weeks ago, and then things went quiet. Totally normal during a busy stretch on the plant floor, but I wanted to reach out before your trial window closes.
+
+A lot of plant managers we work with start exactly where you did, logging that first work order, and then realize pretty quickly how much time they were losing tracking everything in spreadsheets. Given that context, I think there's a good chance we could show you something genuinely useful in just 15 minutes.
+
+Would you be open to a quick call this week? Happy to work around your schedule.
+
+[Your Name]",21,0,3,2,1,10,Work order created,0,No,14,2,0,1,0,0,Google Ads,US
+Free Trial User,NovaMed Facilities,Priya Shah,Facilities Manager,Healthcare,1400,,,Nothing formal,,High,High,Route to AE via ChiliPiper,"Priya Shah is a Facilities Manager at a 1,400-employee healthcare organization who has driven 18 sessions in the last 7 days, activated 8 of 10 features, created 89 work orders and 7 PM schedules, invited 6 team members, and was active today -- indicating deep, team-wide trial adoption with strong purchase intent.",,5,18,42,22,8,10,Work order created + PM scheduled + asset added + compliance report run,6,Yes,0,89,7,41,9,2,Organic / Direct,US
+Free Trial User,Summit Retail Corp,Jordan Blake,Regional Operations Manager,Retail,3100,,,Point of sale system,,Low,High,Flag for CS monitoring,"Jordan Blake shows strong product engagement (8 sessions last 7 days, 21 work orders, mobile app used, 3 team members invited) but is disqualified on fit due to retail industry and company size of 3,100 employees exceeding the 2,500-employee threshold.",,10,8,19,11,4,10,Work order created + asset added,3,Yes,2,21,1,8,2,0,Google Ads,US
+Free Trial User,Vantage Logistics LLC,Chris Dolan,Head of Fleet Operations,Logistics / Warehousing,530,,,Excel,,High,High,Route to AE via ChiliPiper,"Chris Dolan is a Head of Fleet Operations at a 530-person logistics company who has activated 9 of 10 features, created 103 work orders and 8 PM schedules, invited 7 team members, and was active today — hitting every high-engagement threshold.",,3,21,21,25,9,10,Work order created + PM scheduled + asset added + team invited + report run,7,Yes,0,103,8,55,11,2,Organic / Direct,US
+Free Trial User,ClearPath Property Mgmt,Nia Foster,Operations Director,Facilities Management,240,,,ServiceChannel,,High,Low,Enroll in BDR sequence via Outreach,"Nia is a strong ICP match as Operations Director at a 240-person facilities management company, but has only logged 1 session in 30 days, activated 1 feature, and has been inactive for 29 days, signaling a stalled trial.","Subject: Quick question about your ClearPath trial
+
+Hi Nia,
+
+I noticed you signed up for a trial about a month ago and got a work order created -- which is a solid first step -- but it looks like things may have gotten busy since then.
+
+Totally understand. Operations Directors at facilities companies rarely have a spare hour to explore new software on top of everything else they are managing.
+
+I wanted to reach out personally because ClearPath is exactly the kind of company we built this for -- mid-size facilities teams that are ready to move beyond something like ServiceChannel but do not want the complexity or cost of an enterprise platform.
+
+Would it be worth 15 minutes to walk through what the product can actually do for your team? I can show you the pieces that tend to matter most for facilities operations -- PM scheduling, asset tracking, and getting your techs mobile -- so you can decide if it is worth picking back up.
+
+No pressure either way. Happy to work around your schedule.
+
+[Your Name]",30,0,1,3,1,10,Work order created,0,No,29,1,0,0,0,0,Microsoft Ads,US
+Free Trial User,Pinnacle SaaS Inc.,Emily Vargas,Head of Customer Success,SaaS / Technology,190,,,Salesforce,,Low,Low,Suppress from active outreach,"Emily Vargas is a CS-level IC at a SaaS/Technology company sourced via Zapier/Integrations, triggering three hard low-fit disqualifiers, and her engagement metrics (6 sessions last 7 days, 14 sessions last 30 days, 3 features activated, 0 PM schedules, 9 work orders) fall below high-engagement thresholds across the board.",,7,6,14,8,3,10,Work order created + asset added,2,No,3,9,0,4,1,0,Zapier / Integrations,US
+Free Trial User,Keystone Food Group,Marcus Webb,Director of Plant Operations,Manufacturing,760,,,IBM Maximo (outdated),,High,High,Route to AE via ChiliPiper,"Marcus Webb is a Director of Plant Operations at a 760-person manufacturer who has logged 9 sessions in the last 7 days, activated 7 features, created 58 work orders and 5 PM schedules, invited 5 team members, and was active just 2 days ago — all strong signals of a highly engaged, high-fit trial user ready for an AE conversation.",,11,9,24,16,7,10,Work order created + PM scheduled + asset added + compliance report run,5,Yes,2,58,5,29,7,1,Microsoft Ads,US
+Free Trial User,Ridgeline Energy Partners,Sandra Howell,Reliability Engineer,Energy / Utilities,490,,,Spreadsheets + paper,,Low,Low,Suppress from active outreach,"Sandra Howell holds an IC-level title (Reliability Engineer), which is a hard disqualifier for high fit regardless of the qualifying industry and company size, and her engagement falls below thresholds with only 4 sessions in the last 7 days, 11 sessions in the last 30 days, 3 features activated, 2 milestones hit, and last active 5 days ago.",,18,4,11,9,3,10,Work order created + PM scheduled,2,Yes,5,14,2,8,2,0,Google Ads,US
+Free Trial User,Tanaka Electronics,Hiroshi Tanaka,Head of Facilities,Manufacturing,310,,,Nothing formal,,High,High,Route to AE via ChiliPiper,"Hiroshi Tanaka is a Head of Facilities at a 310-person manufacturer who has logged 14 sessions in the last 7 days, activated 7 features, created 61 work orders and 4 PM schedules, invited 3 team members, and was active just 1 day ago -- hitting every high-engagement threshold.",,6,14,33,19,7,10,Work order created + PM scheduled + asset added + mobile activated,3,Yes,1,61,4,28,6,1,Organic / Direct,Canada
+Free Trial User,Greenfield Brewing Co.,Aisha Thomas,Operations Manager,Food and Beverage,180,,,Spreadsheets,,High,Low,Enroll in BDR sequence via Outreach,"Aisha is a strong ICP match as an Operations Manager at a 180-person food and beverage company, but trial engagement has stalled with only 1 session in the last 7 days, last active 8 days ago, and just 2 features activated out of 10 available.","Subject: Quick question about your Greenfield trial
+
+Hi Aisha,
+
+I noticed you created a few work orders in your trial a little while back, which is a great first step, but I wanted to reach out since it looks like things may have gotten busy.
+
+A lot of operations teams coming from spreadsheets tell us the first week or two is the hardest part, not because the software is complicated, but because there is never a slow moment to actually sit down and set things up. Sound familiar?
+
+I would love to grab 15 minutes to walk through where you left off, help you get a PM schedule or two in place, and show you how a few other food and beverage teams are using the platform day to day. No pitch, just hands-on help.
+
+Would sometime this week or next work for you?
+
+[Your Name]",9,1,4,5,2,10,Work order created,1,No,8,3,0,2,0,0,Google Ads,US
