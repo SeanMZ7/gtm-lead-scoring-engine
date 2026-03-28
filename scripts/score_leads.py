@@ -53,9 +53,10 @@ Score the following lead. Return a JSON object with exactly these fields:
 The email should:
 - Address the contact by first name
 - Reference their specific company and role
-- Connect to a pain point solves that is relevant to their signal or context
+- Connect to a pain point it solves that is relevant to their signal or context
 - Include a soft CTA (15-min call, not a demo push)
 - Sound like a human wrote it — no buzzword soup
+- Sign off with [Your Name] — never use "Team" or any other signature
 
 Return only the JSON object. No preamble, no explanation outside the JSON.
 
