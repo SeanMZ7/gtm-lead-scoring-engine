@@ -45,7 +45,7 @@ All results are saved to `outputs/scored_leads.csv` for review, CRM upload, or d
 **1. Claude API for scoring, not hardcoded if/else logic.**
 A rules engine would score on individual attributes in isolation. A language model reasons across all signals simultaneously — it can recognize that a Facilities Manager at a 300-person manufacturer who just posted a job for a Maintenance Coordinator and has 47 website visits is a different situation than one who has none of those signals, even if both match on title and industry. That compound reasoning is where the value lives.
 
-**2. Model: claude-opus-4-6.**
+**2. Model: claude-sonnet-4-6.**
 This is a prioritization and personalization task, not a classification task. Cheaper/faster models would score correctly on easy cases but miss nuance — wrong-level titles, borderline industries, signals that only matter in context. At the MVP stage, output quality matters more than cost-per-call. Speed can be optimized later.
 
 **3. Scoring criteria embedded in the prompt, not in code.**

@@ -32,9 +32,9 @@ gtm-brain/
 ## 2. HIGH-LEVEL SYSTEM DIAGRAM
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                        score_leads.py                           │
-│                                                                 │
+┌────────────────────────────────────────────────────────────────┐
+│                        score_leads.py                          │
+│                                                                │
 │  ┌──────────────┐     ┌─────────────────┐     ┌─────────────┐  │
 │  │              │     │                 │     │             │  │
 │  │  data/       │────▶│  ICP Scoring    │────▶│  Decision   │  │
@@ -47,7 +47,7 @@ gtm-brain/
 │                       ┌────────────────┐    ┌────────────────┐ │
 │                       │                │    │                │ │
 │                       │  Claude API    │    │  Hot → Draft   │ │
-│                       │  claude-opus-  │    │  email         │ │
+│                       │  claude-sonnet-│    │  email         │ │
 │                       │  4-6           │    │                │ │
 │                       │                │    │  Warm/Cold →   │ │
 │                       └────────────────┘    │  Score + reason│ │
@@ -113,7 +113,7 @@ Step 2 — Load
 Step 3 — Per-lead loop (runs 10 times)
   format_lead() converts dict to "- key: value\n" string
   ICP_SCORING_PROMPT.format(lead_data=...) inserts lead into prompt template
-  client.messages.create() sends prompt to Claude API (claude-opus-4-6)
+  client.messages.create() sends prompt to Claude API (claude-sonnet-4-6)
   API returns message object with JSON string in content[0].text
   Script strips markdown code fences if present
   json.loads() parses JSON → dict with {score, reason, outreach_email}
@@ -138,7 +138,7 @@ Step 5 — Summary
 | Dependency | Role in this system | Production replacement |
 |---|---|---|
 | `anthropic` (Python SDK) | Sends prompts to Claude API, handles auth and HTTP | Same SDK — add retry logic, rate limit handling, and cost tracking |
-| `claude-opus-4-6` (model) | Performs ICP scoring and email drafting | Could tier: cheap model for initial Cold filter, Opus only for borderline/Hot decisions |
+| `claude-sonnet-4-6` (model) | Performs ICP scoring and email drafting | Could tier: cheap model for initial Cold filter, sonnet only for borderline/Hot decisions |
 | `csv` (stdlib) | Reads input, writes output | Replace with pandas + SQLAlchemy for database-backed I/O |
 | `json` (stdlib) | Parses Claude's structured response | Add schema validation (pydantic) to catch malformed API responses |
 | `pathlib` (stdlib) | Resolves file paths relative to script location | Same — already production-appropriate |
@@ -188,12 +188,12 @@ At production scale, the system expands from a batch CSV processor into a real-t
 │                                                                         │
 │  DATA SOURCES                 ENRICHMENT LAYER          SCORING ENGINE  │
 │  ┌─────────────┐              ┌──────────────┐          ┌─────────────┐ │
-│  │ HubSpot /   │              │ Clay / Apollo│          │             │ │
+│  │ HubSpot /   │              │ Outreach     │          │             │ │
 │  │ Salesforce  │─────────────▶│ (firmographic│─────────▶│ Claude API  │ │
 │  │ CRM         │              │  enrichment) │          │ (tiered:    │ │
-│  └─────────────┘              └──────────────┘          │  filter →  │ │
-│  ┌─────────────┐              ┌──────────────┐          │  score →   │ │
-│  │ Intent data │              │ Bombora / G2 │          │  draft)    │ │
+│  └─────────────┘              └──────────────┘          │  filter →   │ │
+│  ┌─────────────┐              ┌──────────────┐          │  score →    │ │
+│  │ Intent data │              │ Bombora / G2 │          │  draft)     │ │
 │  │ (web visits,│─────────────▶│ (intent      │─────────▶│             │ │
 │  │  signals)   │              │  signals)    │          └──────┬──────┘ │
 │  └─────────────┘              └──────────────┘                 │        │
@@ -203,24 +203,24 @@ At production scale, the system expands from a batch CSV processor into a real-t
 │  └─────────────┘              └──────────────┘                          │
 │                                                                         │
 │  DECISION LAYER                                OUTPUT LAYER             │
-│  ┌────────────────────────────┐               ┌─────────────────────┐  │
-│  │                            │               │                     │  │
-│  │  Hot ──────────────────────┼──────────────▶│ Rep outbox draft +  │  │
-│  │  (enroll in hot sequence)  │               │ CRM task created    │  │
-│  │                            │               │                     │  │
-│  │  Warm ─────────────────────┼──────────────▶│ Tagged in CRM,      │  │
-│  │  (nurture queue)           │               │ re-score in 30 days │  │
-│  │                            │               │                     │  │
-│  │  Cold ─────────────────────┼──────────────▶│ Suppressed from     │  │
-│  │  (suppress)                │               │ active outreach     │  │
-│  │                            │               │                     │  │
-│  └────────────────────────────┘               └─────────────────────┘  │
+│  ┌────────────────────────────┐               ┌─────────────────────┐   │
+│  │                            │               │                     │   │
+│  │  Hot ──────────────────────┼──────────────▶│ Rep outbox draft +  │   │
+│  │  (enroll in hot sequence)  │               │ CRM task created    │   │
+│  │                            │               │                     │   │
+│  │  Warm ─────────────────────┼──────────────▶│ Tagged in CRM,      │   │
+│  │  (nurture queue)           │               │ re-score in 30 days │   │
+│  │                            │               │                     │   │
+│  │  Cold ─────────────────────┼──────────────▶│ Suppressed from     │   │
+│  │  (suppress)                │               │ active outreach     │   │
+│  │                            │               │                     │   │
+│  └────────────────────────────┘               └─────────────────────┘   │
 │                                                                         │
 │  FEEDBACK LOOP                                                          │
-│  ┌──────────────────────────────────────────────────────────────────┐  │
-│  │  Rep feedback (accepted/rejected email) + deal outcomes          │  │
-│  │  → logged to database → used to refine ICP scoring prompt        │  │
-│  └──────────────────────────────────────────────────────────────────┘  │
+│  ┌──────────────────────────────────────────────────────────────────┐   │
+│  │  Rep feedback (accepted/rejected email) + deal outcomes          │   │
+│  │  → logged to database → used to refine ICP scoring prompt        │   │
+│  └──────────────────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 

@@ -37,7 +37,7 @@ When scoring leads, Claude should weigh:
 ## Tech Stack
 
 - **Language:** Python 3
-- **AI:** Claude API (`anthropic` SDK) — model `claude-opus-4-6`
+- **AI:** Claude API (`anthropic` SDK) — model `claude-sonnet-4-6`
 - **Data:** CSV (dummy data in `data/dummy_leads.csv`)
 - **Output:** CSV to `outputs/scored_leads.csv`
 

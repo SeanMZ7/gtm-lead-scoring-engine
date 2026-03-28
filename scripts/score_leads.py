@@ -16,7 +16,7 @@ import anthropic
 # Config
 # ---------------------------------------------------------------------------
 
-MODEL = "claude-opus-4-6"
+MODEL = "claude-sonnet-4-6"
 DATA_FILE = Path(__file__).parent.parent / "data" / "dummy_leads.csv"
 OUTPUT_FILE = Path(__file__).parent.parent / "outputs" / "scored_leads.csv"
 
