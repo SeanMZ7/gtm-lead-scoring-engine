@@ -3,6 +3,10 @@
 A lead scoring and outreach system that reads a list of leads, scores each one Hot/Warm/Cold against specific ICP using Claude AI, and drafts a personalized first-touch email for every Hot lead. It replaces manual rep research and gut-feel prioritization with a consistent, auditable scoring process.
 
 ---
+## System Architecture
+
+![GTM Brain Architecture](docs/architecture.svg)
+---
 
 ## What the Output Looks Like
 
