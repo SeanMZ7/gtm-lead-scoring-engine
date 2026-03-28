@@ -1,0 +1,71 @@
+company_name,contact_name,title,industry,company_size,days_since_signup,sessions_last_7_days,sessions_last_30_days,avg_session_duration_minutes,features_activated,total_features_available,key_milestones_hit,team_members_invited,mobile_app_used,last_active_days_ago,work_orders_created,pm_schedules_created,assets_added,reports_run,integrations_attempted,current_solution,inbound_source,country,fit_score,engagement_score,routing_action,reason,outreach_draft
+Apex Fabrication Co.,Danny Marsh,Director of Maintenance,Manufacturing,620,8,12,31,18,6,10,Work order created + first PM scheduled + asset added,4,Yes,1,47,3,22,5,1,Spreadsheets,Google Ads,US,High,High,Route to AE via ChiliPiper,"Danny Marsh is a Director of Maintenance at a 620-person manufacturer replacing spreadsheets — a textbook ICP match — and has demonstrated exceptional engagement across every key signal: 12 sessions in 7 days, 31 in 30, 18-minute avg duration, 6 features activated, 4 team members invited, 47 work orders created, 3 PM schedules, 22 assets added, 5 reports run, mobile app used, and was active just 1 day ago.",
+Bluestone Cold Storage,Rachel Kim,VP of Operations,Facilities Management,410,14,2,6,4,2,10,Work order created,1,No,6,4,0,3,0,0,Legacy CMMS (Maximo),LinkedIn Ads,US,High,Low,Enroll in BDR sequence via Outreach,"Rachel is a VP of Operations at a 410-person facilities management company migrating from a legacy CMMS — strong ICP fit — but has stalled after 14 days with only 2 sessions in the last 7 days, 4 work orders, no PM schedules, and last active 6 days ago, signaling low engagement.","Subject: Quick question about your trial, Rachel
+
+Hi Rachel,
+
+I noticed you created some work orders in the trial a little while back — then things went quiet. Totally get it, busy operations don't pause for software evaluations.
+
+I was curious: what made you start looking in the first place? A lot of teams coming off Maximo tell us the system technically works, but getting a simple PM schedule or report out of it takes way longer than it should.
+
+Worth a 15-minute call to see if what you were exploring actually maps to that problem? Happy to work around your schedule.
+
+Best,
+[BDR Name]"
+Hargrove Packaging Ltd.,Tom Osei,Plant Manager,Manufacturing,880,21,0,3,2,1,10,Work order created,0,No,14,2,0,1,0,0,Spreadsheets,Google Ads,US,High,Low,Enroll in BDR sequence via Outreach,"Tom is a Plant Manager at an 880-person manufacturer currently using spreadsheets — strong ICP fit — but has gone completely quiet with 0 sessions in the last 7 days, only 1 feature activated, no PM schedules, and last active 14 days ago, indicating a stalled trial that needs human re-engagement.","Subject: Still worth 15 minutes, Tom?
+
+Hey Tom,
+
+Noticed you logged in a couple of times and created a work order — then things went quiet. Totally get it, running a plant doesn't leave much room for evaluating new tools.
+
+I'm curious: what made you start looking in the first place? Most plant managers I talk to hit a wall with spreadsheets when equipment starts slipping through the cracks — reactive fires instead of planned maintenance.
+
+Worth a quick 15-minute call to see if it makes sense to keep going? Happy to work around your schedule.
+
+Tom O. — what do you think?"
+NovaMed Facilities,Priya Shah,Facilities Manager,Healthcare,1400,5,18,42,22,8,10,Work order created + PM scheduled + asset added + compliance report run,6,Yes,0,89,7,41,9,2,Nothing formal,Organic / Direct,US,High,High,Route to AE via ChiliPiper,"Priya is a Facilities Manager at a 1,400-employee healthcare company — squarely in ICP — and is exhibiting exceptional trial engagement: 18 sessions in 7 days, 89 work orders created, 7 PM schedules, 41 assets added, 4 key milestones hit, and 6 team members invited, all within 5 days of signup with a last active date of today.",
+Summit Retail Corp,Jordan Blake,Regional Operations Manager,Retail,3100,10,8,19,11,4,10,Work order created + asset added,3,Yes,2,21,1,8,2,0,Point of sale system,Google Ads,US,Low,High,Flag for CS monitoring,"Jordan Blake shows strong behavioral engagement (8 sessions in last 7 days, 21 work orders created, 3 team members invited, mobile app used, last active 2 days ago), but is a clear ICP mismatch on two disqualifying dimensions — retail industry and company size of 3,100 employees — making this a CS monitor rather than an AE or BDR investment.",
+Vantage Logistics LLC,Chris Dolan,Head of Fleet Operations,Logistics / Warehousing,530,3,21,21,25,9,10,Work order created + PM scheduled + asset added + team invited + report run,7,Yes,0,103,8,55,11,2,Excel,Organic / Direct,US,High,High,Route to AE via ChiliPiper,"Chris Dolan is Head of Fleet Operations at a 530-person logistics company — a strong ICP match — and has demonstrated exceptional product engagement in just 3 days: 21 sessions, 25-minute avg session duration, 5 key milestones hit, 103 work orders created, 8 PM schedules, 55 assets added, 7 team members invited, and active as of today.",
+ClearPath Property Mgmt,Nia Foster,Operations Director,Facilities Management,240,30,0,1,3,1,10,Work order created,0,No,29,1,0,0,0,0,ServiceChannel,Microsoft Ads,US,High,Low,Enroll in BDR sequence via Outreach,"Nia is a strong ICP match — Operations Director at a 240-person facilities management company using a legacy CMMS — but has gone almost entirely dark after signup, with only 1 session in 30 days, 1 work order created, no PM schedules or assets added, and last active 29 days ago.","Subject: Nia — quick question about ClearPath's maintenance ops
+
+Hi Nia,
+
+You signed up about a month ago and got as far as creating a work order — then things went quiet. Totally get it; ops directors don't exactly have slow days.
+
+I wanted to reach out personally because ClearPath fits exactly the kind of team we work with — facilities-focused, running on an existing platform that often leaves gaps in visibility or PM tracking.
+
+Was there something that didn't click, or did it just fall off the radar? Either way, I'd love to get 15 minutes to hear where things stand and see if it's worth picking back up.
+
+Worth a quick call?
+
+Best,
+[BDR Name]"
+Pinnacle SaaS Inc.,Emily Vargas,Head of Customer Success,SaaS / Technology,190,7,6,14,8,3,10,Work order created + asset added,2,No,3,9,0,4,1,0,Salesforce,Zapier / Integrations,US,Low,Low,Suppress from active outreach,"Emily Vargas is a Head of Customer Success at a SaaS/Technology company — disqualified on both industry and title — signed up via Zapier/Integrations (a known non-ICP source), and engagement is below threshold with only 2 key milestones hit, no PM schedules created, no mobile usage, and avg session duration of just 8 minutes.",
+Keystone Food Group,Marcus Webb,Director of Plant Operations,Manufacturing,760,11,9,24,16,7,10,Work order created + PM scheduled + asset added + compliance report run,5,Yes,2,58,5,29,7,1,IBM Maximo (outdated),Microsoft Ads,US,High,High,Route to AE via ChiliPiper,"Marcus Webb is a Director of Plant Operations at a 760-person manufacturer actively migrating off IBM Maximo, with 9 sessions in the last 7 days, 4 key milestones hit, 58 work orders created, 5 PM schedules, 29 assets added, 5 team members invited, and last active just 2 days ago — strong ICP fit and unambiguous high engagement across every dimension.",
+Ridgeline Energy Partners,Sandra Howell,Reliability Engineer,Energy / Utilities,490,18,4,11,9,3,10,Work order created + PM scheduled,2,Yes,5,14,2,8,2,0,Spreadsheets + paper,Google Ads,US,High,Low,Enroll in BDR sequence via Outreach,"Sandra is a strong ICP match — Reliability Engineer at a 490-person energy/utilities company moving off spreadsheets and paper — but engagement has stalled with only 4 sessions in the last 7 days, last active 5 days ago, 3 features activated, and 2 key milestones hit, indicating she has gone quiet after an initially promising start.","Subject: quick question about your PM schedules
+
+Hi Sandra,
+
+I noticed you've been setting up work orders and a couple of PM schedules over the past few weeks — solid start, especially coming from spreadsheets and paper.
+
+Things tend to slow down right around this stage, usually because there's a real operational question that's hard to answer alone — how to structure asset hierarchies, how to get the team actually using it, or just whether it'll hold up at scale.
+
+Any of that feel familiar? I'd love to grab 15 minutes to make sure you're not stuck on something we can help you clear quickly.
+
+Worth a quick chat?
+
+Best,
+[BDR Name]"
+Tanaka Electronics,Hiroshi Tanaka,Head of Facilities,Manufacturing,310,6,14,33,19,7,10,Work order created + PM scheduled + asset added + mobile activated,3,Yes,1,61,4,28,6,1,Nothing formal,Organic / Direct,Canada,High,High,Route to AE via ChiliPiper,"Hiroshi Tanaka is a Head of Facilities at a 310-person manufacturer with no formal prior solution (organic inbound), and has demonstrated exceptional product engagement across every dimension — 14 sessions in 7 days, 19-minute avg session duration, 7/10 features activated, 4 milestones hit, 61 work orders created, 4 PM schedules, 28 assets added, 6 reports run, 3 team members invited, mobile app active, and last active just 1 day ago.",
+Greenfield Brewing Co.,Aisha Thomas,Operations Manager,Food and Beverage,180,9,1,4,5,2,10,Work order created,1,No,8,3,0,2,0,0,Spreadsheets,Google Ads,US,High,Low,Enroll in BDR sequence via Outreach,"Aisha is a strong ICP match — Operations Manager at a 180-person food and beverage company currently on spreadsheets — but has gone quiet after 9 days, with only 1 session in the last 7 days, last active 8 days ago, 2 features activated, no PM schedules, and only 3 work orders created, indicating a stalled trial that warrants direct BDR re-engagement.","Subject: quick question about your trial, Aisha
+
+Hi Aisha,
+
+I noticed you jumped in a little over a week ago and got a work order logged — then things got quiet. Totally normal, ops life doesn't slow down to let you evaluate software.
+
+I'm curious: was there something specific that got in the way, or did the setup feel like more lift than expected? A lot of folks managing maintenance on spreadsheets hit a similar wall early on — it's usually one or two small things we can unblock fast.
+
+Worth a 15-minute call this week? Happy to work around your schedule.
+
+Best,
+[BDR Name]"
