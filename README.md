@@ -1,28 +1,36 @@
-# GTM Engine
+# GTM Brain
 
-A lead scoring and outreach system that reads a list of leads, scores each one Hot/Warm/Cold against specific ICP using Claude AI, and drafts a personalized first-touch email for every Hot lead. It replaces manual rep research and gut-feel prioritization with a consistent, auditable scoring process.
+An AI-powered GTM intelligence layer that scores inbound leads, outbound leads, and free trial users using Claude AI, routes each to the correct GTM motion, and drafts personalized outreach where applicable. Runs as a five-page Flask web UI — no terminal required for day-to-day use.
 
 ---
-## System Architecture
 
-![GTM Brain Architecture](docs/architecture.svg)
----
+## System Overview
 
-## What the Output Looks Like
+Three scoring scripts unified under a Flask web interface:
 
-Results are saved to `outputs/scored_leads.csv`. Every row from the input gets three new columns appended:
-
-| Field | Example |
+| Script | What it does |
 |---|---|
-| `score` | `Hot` |
-| `reason` | Director of Facilities at an 850-person manufacturer with a maintenance coordinator job posting and 47 site visits in 30 days — strong ICP fit with clear buying signal. |
-| `outreach_email` | **Subject:** Maintenance ops at Apex — quick question // Hi Diana, noticed Apex is hiring a Maintenance Coordinator... |
+| `scripts/score_leads.py` | Scores inbound and outbound leads Hot/Warm/Cold against ICP; drafts personalized first-touch emails for Hot leads |
+| `scripts/score_trials.py` | Two-dimensional scoring of free trial users on ICP fit AND behavioral engagement; routes to AE fast-track, BDR sequence, CS monitoring, or suppression |
+| `scripts/run_gtm_engine.py` | Orchestrator that runs both scoring scripts in sequence and produces a unified full-funnel report |
 
-Hot leads get a full email draft. Warm and Cold leads get a score and reason only.
+All three are accessible from the Flask UI without touching the terminal.
 
 ---
 
-## Setup
+## The Five Pages
+
+| Page | What it does |
+|---|---|
+| **Dashboard** | At-a-glance summary of recent scoring runs — Hot/Warm/Cold counts, routing distribution, last run timestamp |
+| **Lead Scoring** | Run `score_leads.py` from the browser, view results in a sortable table, export to CSV |
+| **Trial Conversion** | Run `score_trials.py` from the browser, view two-dimensional scores and routing actions, export to CSV |
+| **Full Funnel** | Run `run_gtm_engine.py` from the browser, view the unified cross-funnel report |
+| **ICP Settings** | Edit scoring criteria — target industries, company size range, ideal titles, buying signals, disqualifiers — via a form. Saves to `config/icp_config.json`. No code required. |
+
+---
+
+## How to Run
 
 ### 1. Clone and enter the project
 
@@ -37,85 +45,145 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-You'll need to run `source venv/bin/activate` each time you open a new terminal session before running the script.
+Run `source venv/bin/activate` each time you open a new terminal session.
 
 ### 3. Install dependencies
 
 ```bash
-pip install anthropic
+pip install anthropic flask
 ```
 
 ### 4. Set your API key
 
-Get a key at [console.anthropic.com](https://console.anthropic.com) → API Keys. Then set it in your terminal:
+Get a key at [console.anthropic.com](https://console.anthropic.com) → API Keys. Then:
 
 ```bash
-export ANTHROPIC_API_KEY=your-key-here...
+export ANTHROPIC_API_KEY=your-key-here
 ```
 
-This only lasts for the current terminal session. To make it permanent, add that line to your `~/.zshrc` or `~/.bash_profile`.
+To make it permanent, add that line to your `~/.zshrc` or `~/.bash_profile`.
 
-### 5. Run the script
+### 5. Start the web UI
 
 ```bash
+python3 app.py
+```
+
+Then open [http://localhost:5000](http://localhost:5000) in your browser.
+
+---
+
+## How to Run Scripts Directly from the Terminal
+
+If you prefer to run scripts without the UI:
+
+```bash
+# Score leads only
 python3 scripts/score_leads.py
+
+# Score trial users only
+python3 scripts/score_trials.py
+
+# Run full-funnel engine (runs both scripts, produces unified report)
+python3 scripts/run_gtm_engine.py
 ```
 
-You'll see live progress in the terminal. Results land in `outputs/scored_leads.csv` when done.
+Results are written to `outputs/` in all cases.
+
+---
+
+## Output Format
+
+### Lead scoring output (`outputs/scored_leads.csv`)
+
+| Field | Example |
+|---|---|
+| `score` | `Hot` |
+| `reason` | Director of Facilities at an 850-person manufacturer with a maintenance coordinator job posting and 47 site visits in 30 days — strong ICP fit with clear buying signal. |
+| `outreach_email` | **Subject:** Maintenance ops at Apex — quick question // Hi Diana... |
+| `priority_flag` | `speed-to-lead` |
+
+### Trial scoring output (`outputs/scored_trials.csv`)
+
+| Field | Example |
+|---|---|
+| `icp_score` | `Strong` |
+| `engagement_score` | `High` |
+| `routing_action` | `AE Fast-Track` |
+| `reason` | Strong ICP fit + high engagement — demo request + 12 work orders created in trial. |
 
 ---
 
 ## File Structure
 
 ```
-gtm-brain/
-├── CLAUDE.md               Project context and rules for Claude Code
-├── ARCHITECTURE.md         Technical reference — how the system works
-├── PROBLEM_STATEMENT.md    Business case and design decisions
-├── SKILL.md                Operational playbook — how to run and tune the system
-├── GOTCHAS.md              Issues encountered and how they were fixed
-├── README.md               This file
+gtm-lead-scoring-engine/
+├── CLAUDE.md                   Project context and rules for Claude Code
+├── ARCHITECTURE.md             Technical reference — how the system works
+├── PROBLEM_STATEMENT.md        Business case and design decisions
+├── ROADMAP.md                  V1 through V4 product roadmap
+├── SKILL.md                    GTM playbook — how to run and tune the system
+├── GOTCHAS.md                  Issues encountered and how they were fixed
+├── README.md                   This file
+│
+├── app.py                      Flask application — routes, UI logic, subprocess calls
+│
+├── templates/                  Jinja2 HTML templates
+│   ├── base.html               Shared layout and navigation
+│   ├── dashboard.html          Dashboard page
+│   ├── leads.html              Lead Scoring page
+│   ├── trials.html             Trial Conversion page
+│   ├── funnel.html             Full Funnel page
+│   └── settings.html           ICP Settings page
+│
+├── static/                     CSS and frontend assets
+│   └── style.css
+│
+├── config/
+│   └── icp_config.json         Editable ICP criteria — readable and writable by the UI
 │
 ├── data/
-│   └── dummy_leads.csv     Input leads — edit this to change who gets scored
+│   ├── dummy_leads.csv         Input leads — edit to change who gets scored
+│   └── dummy_trials.csv        Input trial users with Mixpanel behavioral data
 │
 ├── scripts/
-│   └── score_leads.py      The script — don't edit unless changing how it works
+│   ├── score_leads.py          Lead scoring script
+│   ├── score_trials.py         Trial user scoring script
+│   └── run_gtm_engine.py       Full-funnel orchestrator
 │
 └── outputs/
-    └── scored_leads.csv    Generated results — safe to open, sort, and share
+    ├── scored_leads.csv        Lead scoring results
+    ├── scored_trials.csv       Trial scoring results
+    └── full_funnel_report.csv  Unified cross-funnel report
 ```
 
 ---
 
-## How to Update the Scoring Criteria
+## How to Update Scoring Criteria
 
-You do not need to touch code to change how leads are scored. All ICP logic lives in the prompt inside `scripts/score_leads.py`.
+### Via the UI (recommended)
 
-Open the file and find the block that starts with:
+Go to the **ICP Settings** page in the web UI. Edit the criteria fields and click Save. Changes take effect on the next scoring run. No code required.
 
-```python
-ICP_SCORING_PROMPT = """You are a GTM analyst...
-```
+### Via the config file directly
 
-Inside that block you'll see sections for ideal buyer titles, ideal industries, company size ranges, buying signals, and disqualifiers. Edit those sections in plain English — the model will apply your updated criteria on the next run.
-
-**Example:** To add "property management" as a target industry, find the industries list and add it. To make government leads Warm instead of Cold, update the disqualifiers section. No coding required.
+Open `config/icp_config.json` and edit in plain text. The scoring scripts read from this file at runtime.
 
 ---
 
-## How to Swap In Real Leads
+## How to Swap In Real Data
 
 1. Open `data/dummy_leads.csv` in Excel or Google Sheets
 2. Delete the dummy rows (keep the header row)
-3. Paste in your real leads — the column headers must match exactly:
+3. Paste in your real leads — column headers must match:
 
 ```
 company_name, contact_name, title, industry, company_size,
-recent_signal, website_visits_last_30_days, current_solution, notes
+recent_signal, website_visits_last_30_days, current_solution,
+offer_type, inbound_channel, notes
 ```
 
 4. Save as CSV (not .xlsx)
-5. Run the script — results will overwrite `outputs/scored_leads.csv`
+5. Run from the Lead Scoring page or via terminal
 
-If a field is unknown for a lead, leave it blank. The model handles missing data gracefully and will note the gap in its reasoning.
+If a field is unknown, leave it blank. The model handles missing data and will note the gap in its reasoning.

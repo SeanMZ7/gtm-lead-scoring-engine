@@ -19,14 +19,36 @@ When scoring leads, Claude should weigh:
 | Signal | Weight |
 |---|---|
 | Title matches ops/facilities/maintenance decision maker | High |
-| Industry: manufacturing, facilities mgmt, healthcare, logistics | High |
-| Company size: 100–2,500 employees (mid-market) | High |
+| Industry: manufacturing, facilities mgmt, hospitality, healthcare, logistics | High |
+| Company size: 100–1,000 employees (mid-market) | High |
 | Recent buying signal (job posting, tech evaluation, funding) | Medium |
 | High website engagement (30+ visits/30 days) | Medium |
 | Current solution: spreadsheets, legacy CMMS, or nothing | Medium |
 | Notes indicate pain or active search | Medium |
 | Off-industry (retail, SaaS, consumer) | Disqualifier |
 | Title is individual contributor / non-decision maker | Disqualifier |
+
+## Input Fields
+
+Lead scoring scripts accept the following fields (leave blank if unknown):
+
+```
+company_name, contact_name, title, industry, company_size,
+recent_signal, website_visits_last_30_days, current_solution,
+offer_type, inbound_channel, notes
+```
+
+- **offer_type** — e.g. Demo Request, Free Trial, Content Download, Contact Us. Demo Request leads are flagged for speed-to-lead urgency.
+- **inbound_channel** — e.g. Google Ads, LinkedIn, Organic Search, Partner Referral. Used as a buying signal indicator.
+
+## Output Fields
+
+Every scored lead includes:
+
+- **score** — Hot / Warm / Cold
+- **reason** — one-sentence rationale
+- **outreach_email** — personalized draft for Hot leads only
+- **priority_flag** — `speed-to-lead` for Demo Request leads that need same-day contact; blank otherwise
 
 ## Output Tiers
 
@@ -38,8 +60,10 @@ When scoring leads, Claude should weigh:
 
 - **Language:** Python 3
 - **AI:** Claude API (`anthropic` SDK) — model `claude-sonnet-4-6`
-- **Data:** CSV (dummy data in `data/dummy_leads.csv`)
-- **Output:** CSV to `outputs/scored_leads.csv`
+- **Web UI:** Flask — five-page internal tool (Dashboard, Lead Scoring, Trial Conversion, Full Funnel, ICP Settings)
+- **Data:** CSV (dummy data in `data/dummy_leads.csv`, `data/dummy_trials.csv`)
+- **Config:** `config/icp_config.json` — editable ICP criteria
+- **Output:** CSV to `outputs/`
 
 ## Working Rules for Claude Code
 
