@@ -97,7 +97,7 @@ json{
   "target_industries": ["Manufacturing", "Facilities Management", "Healthcare", "Logistics / Warehousing", "Food and Beverage", "Energy / Utilities"],
   "target_titles": ["Operations Manager", "Facilities Director", "Maintenance Manager", "Plant Manager", "VP of Operations", "Reliability Engineer", "Director of Facilities", "Head of Facilities", "Head of Manufacturing Ops"],
   "company_size_min": 100,
-  "company_size_max": 2500,
+  "company_size_max": 1000,
   "buying_signals": ["Job posting for maintenance role", "CMMS vendor evaluation", "RFP posted", "LinkedIn activity about maintenance pain", "Attended webinar or content", "High website engagement (30+ visits/30 days)"],
   "disqualifier_industries": ["Retail", "SaaS / Technology", "Consumer", "Government / Utilities"],
   "disqualifier_titles": ["HR", "Finance", "IT", "Customer Success", "Individual Contributor"]
