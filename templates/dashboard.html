@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — GTM Brain{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">GTM Brain</h1>
+    <p class="page-subtitle">AI-powered GTM intelligence layer</p>
+  </div>
+  <div class="last-run">
+    {% if last_run %}
+      Last run: <strong>{{ last_run }}</strong>
+    {% else %}
+      <span class="muted">No run yet</span>
+    {% endif %}
+  </div>
+</div>
+
+{% if stats %}
+  <!-- Stat Cards -->
+  <div class="stat-grid">
+    <div class="stat-card stat-ae">
+      <div class="stat-label">AE Fast-Track</div>
+      <div class="stat-value">{{ stats.ae }}</div>
+      <div class="stat-pct">{{ stats.ae_pct }}% of total</div>
+    </div>
+    <div class="stat-card stat-bdr">
+      <div class="stat-label">BDR Sequence</div>
+      <div class="stat-value">{{ stats.bdr }}</div>
+      <div class="stat-pct">{{ stats.bdr_pct }}% of total</div>
+    </div>
+    <div class="stat-card stat-cs">
+      <div class="stat-label">CS Monitor</div>
+      <div class="stat-value">{{ stats.cs }}</div>
+      <div class="stat-pct">{{ stats.cs_pct }}% of total</div>
+    </div>
+    <div class="stat-card stat-suppress">
+      <div class="stat-label">Suppressed</div>
+      <div class="stat-value">{{ stats.suppress }}</div>
+      <div class="stat-pct">{{ stats.suppress_pct }}% of total</div>
+    </div>
+  </div>
+
+  <!-- Routing Distribution Bar -->
+  <div class="card">
+    <h2 class="card-title">Routing Distribution</h2>
+    <div class="dist-bar">
+      {% if stats.ae_pct > 0 %}
+        <div class="dist-seg seg-ae" style="width: {{ stats.ae_pct }}%">
+          <span class="dist-label">AE {{ stats.ae_pct }}%</span>
+        </div>
+      {% endif %}
+      {% if stats.bdr_pct > 0 %}
+        <div class="dist-seg seg-bdr" style="width: {{ stats.bdr_pct }}%">
+          <span class="dist-label">BDR {{ stats.bdr_pct }}%</span>
+        </div>
+      {% endif %}
+      {% if stats.cs_pct > 0 %}
+        <div class="dist-seg seg-cs" style="width: {{ stats.cs_pct }}%">
+          <span class="dist-label">CS {{ stats.cs_pct }}%</span>
+        </div>
+      {% endif %}
+      {% if stats.suppress_pct > 0 %}
+        <div class="dist-seg seg-suppress" style="width: {{ stats.suppress_pct }}%">
+          <span class="dist-label">Supp {{ stats.suppress_pct }}%</span>
+        </div>
+      {% endif %}
+    </div>
+    <div class="dist-legend">
+      <span class="legend-item"><span class="legend-dot dot-ae"></span> AE Fast-Track</span>
+      <span class="legend-item"><span class="legend-dot dot-bdr"></span> BDR Sequence</span>
+      <span class="legend-item"><span class="legend-dot dot-cs"></span> CS Monitor</span>
+      <span class="legend-item"><span class="legend-dot dot-suppress"></span> Suppressed</span>
+    </div>
+  </div>
+
+  <!-- Insights Widget -->
+  {% if insights %}
+  <div class="insights-section">
+    <h2 class="insights-title">Signal Callouts</h2>
+    <div class="insights-grid">
+
+      {% if insights.top_ae %}
+      <div class="insight-card insight-ae">
+        <div class="insight-header">
+          <span class="insight-tag tag-ae">Top AE Fast-Track</span>
+        </div>
+        <div class="insight-company">{{ insights.top_ae.company_name }}</div>
+        <div class="insight-contact">{{ insights.top_ae.contact_name }} &mdash; {{ insights.top_ae.title }}</div>
+        <div class="insight-reason">{{ insights.top_ae.reason }}</div>
+      </div>
+      {% endif %}
+
+      {% if insights.top_stalled %}
+      <div class="insight-card insight-bdr">
+        <div class="insight-header">
+          <span class="insight-tag tag-bdr">Highest-Risk Stall</span>
+        </div>
+        <div class="insight-company">{{ insights.top_stalled.company_name }}</div>
+        <div class="insight-contact">{{ insights.top_stalled.contact_name }} &mdash; {{ insights.top_stalled.title }}</div>
+        <div class="insight-reason">{{ insights.top_stalled.reason }}</div>
+      </div>
+      {% endif %}
+
+      {% if insights.top_suppressed %}
+      <div class="insight-card insight-suppress">
+        <div class="insight-header">
+          <span class="insight-tag tag-suppress">Top Suppressed</span>
+        </div>
+        <div class="insight-company">{{ insights.top_suppressed.company_name }}</div>
+        <div class="insight-contact">{{ insights.top_suppressed.contact_name }} &mdash; {{ insights.top_suppressed.title }}</div>
+        <div class="insight-reason">{{ insights.top_suppressed.reason }}</div>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+  {% endif %}
+
+{% else %}
+  <!-- Empty State -->
+  <div class="empty-state">
+    <div class="empty-icon">&#9685;</div>
+    <h2>No data yet</h2>
+    <p>Run the full funnel engine to populate the dashboard, or run individual engines below.</p>
+  </div>
+{% endif %}
+
+<!-- Run Buttons -->
+<div class="run-buttons">
+  <form method="POST" action="{{ url_for('run_leads') }}" class="run-form">
+    <button type="submit" class="btn btn-primary">Run Lead Engine</button>
+  </form>
+  <form method="POST" action="{{ url_for('run_trials') }}" class="run-form">
+    <button type="submit" class="btn btn-primary">Run Trial Engine</button>
+  </form>
+  <form method="POST" action="{{ url_for('run_funnel') }}" class="run-form">
+    <button type="submit" class="btn btn-accent">Run Full Funnel</button>
+  </form>
+</div>
+{% endblock %}

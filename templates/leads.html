@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block title %}Lead Scoring — GTM Brain{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Lead Scoring</h1>
+    <p class="page-subtitle">Inbound &amp; outbound lead qualification</p>
+  </div>
+  <form method="POST" action="{{ url_for('run_leads') }}" class="run-form">
+    <button type="submit" class="btn btn-primary">Run Lead Engine</button>
+  </form>
+</div>
+
+{% if rows %}
+  <div class="table-controls">
+    <!-- Filter buttons -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterRows('all', this)">All</button>
+      <button class="filter-btn filter-ae" onclick="filterRows('ae', this)">AE Fast-Track</button>
+      <button class="filter-btn filter-bdr" onclick="filterRows('bdr', this)">BDR Sequence</button>
+      <button class="filter-btn filter-cs" onclick="filterRows('cs', this)">CS Monitor</button>
+      <button class="filter-btn filter-suppress" onclick="filterRows('suppress', this)">Suppressed</button>
+    </div>
+    <!-- Right controls -->
+    <div class="table-controls-right">
+      <button class="btn-tool" onclick="exportTableCSV('leads-table','leads.csv')">&#8681; Export CSV</button>
+      <div class="col-picker">
+        <button class="col-picker-btn" onclick="toggleColPicker(this)">Columns &#9662;</button>
+        <div class="col-picker-dropdown" style="display:none;">
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'leads-table',0)"> Company</label>
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'leads-table',1)"> Contact</label>
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'leads-table',2)"> Title</label>
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'leads-table',3)"> Industry</label>
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'leads-table',4)"> Score</label>
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'leads-table',5)"> Routing Action</label>
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'leads-table',6)"> Reason</label>
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'leads-table',7)"> Offer Type</label>
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'leads-table',8)"> Channel</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <table class="data-table" id="leads-table">
+      <colgroup><col><col><col><col><col><col><col><col><col><col></colgroup>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Title</th>
+          <th>Industry</th>
+          <th>Score</th>
+          <th>Routing Action</th>
+          <th>Reason</th>
+          <th>Offer Type</th>
+          <th>Channel</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr class="{{ row.row_class }} data-row"
+            data-routing="{{ row.routing_key }}"
+            id="row-{{ loop.index }}"
+            {% if row.has_draft %}data-draft-target="draft-{{ loop.index }}"{% endif %}>
+          <td><strong>{{ row.company_name }}</strong></td>
+          <td>{{ row.contact_name }}</td>
+          <td>{{ row.title }}</td>
+          <td>{{ row.industry }}</td>
+          <td><span class="badge badge-{{ row.score | lower }}">{{ row.score }}</span></td>
+          <td>
+            {{ row.routing_action }}
+            {% if row.priority_flag %}
+            <span class="badge-priority">{{ row.priority_flag }}</span>
+            {% endif %}
+          </td>
+          <td class="reason-cell">{{ row.reason }}</td>
+          <td>{{ row.offer_type }}</td>
+          <td>{{ row.inbound_channel }}</td>
+          <td class="action-cell">
+            {% if row.has_draft %}
+            <button class="toggle-btn" onclick="toggleDraft('draft-{{ loop.index }}', this)">View email draft</button>
+            {% endif %}
+          </td>
+        </tr>
+        {% if row.has_draft %}
+        <tr class="draft-row {{ row.row_class }}" id="draft-{{ loop.index }}" style="display:none;">
+          <td colspan="10">
+            <div class="draft-container">
+              <div class="draft-label">Outreach Draft</div>
+              <textarea class="draft-text" readonly>{{ row.outreach_email }}</textarea>
+            </div>
+          </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="summary-line">
+    Hot <strong>{{ summary.hot }}</strong> &nbsp;|&nbsp;
+    Warm <strong>{{ summary.warm }}</strong> &nbsp;|&nbsp;
+    Cold <strong>{{ summary.cold }}</strong>
+  </div>
+
+{% else %}
+  <div class="empty-state">
+    <div class="empty-icon">&#9432;</div>
+    <h2>No lead scores yet</h2>
+    <p>Click <strong>Run Lead Engine</strong> to score all leads in your pipeline.</p>
+    <form method="POST" action="{{ url_for('run_leads') }}" class="run-form" style="margin-top:1.5rem;">
+      <button type="submit" class="btn btn-primary">Run Lead Engine</button>
+    </form>
+  </div>
+{% endif %}
+{% endblock %}

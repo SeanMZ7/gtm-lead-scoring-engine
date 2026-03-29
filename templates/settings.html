@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}ICP Settings — GTM Brain{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">ICP Settings</h1>
+    <p class="page-subtitle">Update ideal customer profile criteria — no code required</p>
+  </div>
+</div>
+
+<div class="card settings-card">
+  <form method="POST" action="{{ url_for('settings') }}">
+
+    <div class="settings-grid">
+
+      <div class="settings-group">
+        <label class="settings-label" for="target_industries">Target Industries</label>
+        <p class="settings-hint">One industry per line</p>
+        <textarea class="settings-textarea" id="target_industries" name="target_industries" rows="8">{{ config.get('target_industries', []) | join('\n') }}</textarea>
+      </div>
+
+      <div class="settings-group">
+        <label class="settings-label" for="target_titles">Target Titles</label>
+        <p class="settings-hint">One title per line</p>
+        <textarea class="settings-textarea" id="target_titles" name="target_titles" rows="8">{{ config.get('target_titles', []) | join('\n') }}</textarea>
+      </div>
+
+      <div class="settings-group settings-row-2">
+        <label class="settings-label">Company Size (Employees)</label>
+        <p class="settings-hint">Mid-market range</p>
+        <div class="size-inputs">
+          <div class="size-input-group">
+            <label for="company_size_min" class="size-label">Min</label>
+            <input type="number" class="settings-input" id="company_size_min" name="company_size_min"
+                   value="{{ config.get('company_size_min', 100) }}" min="1">
+          </div>
+          <span class="size-dash">&ndash;</span>
+          <div class="size-input-group">
+            <label for="company_size_max" class="size-label">Max</label>
+            <input type="number" class="settings-input" id="company_size_max" name="company_size_max"
+                   value="{{ config.get('company_size_max', 2500) }}" min="1">
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <label class="settings-label" for="buying_signals">Buying Signals</label>
+        <p class="settings-hint">One signal per line</p>
+        <textarea class="settings-textarea" id="buying_signals" name="buying_signals" rows="8">{{ config.get('buying_signals', []) | join('\n') }}</textarea>
+      </div>
+
+      <div class="settings-group">
+        <label class="settings-label" for="disqualifier_industries">Disqualifier Industries</label>
+        <p class="settings-hint">One industry per line</p>
+        <textarea class="settings-textarea" id="disqualifier_industries" name="disqualifier_industries" rows="6">{{ config.get('disqualifier_industries', []) | join('\n') }}</textarea>
+      </div>
+
+      <div class="settings-group">
+        <label class="settings-label" for="disqualifier_titles">Disqualifier Titles</label>
+        <p class="settings-hint">One title per line</p>
+        <textarea class="settings-textarea" id="disqualifier_titles" name="disqualifier_titles" rows="6">{{ config.get('disqualifier_titles', []) | join('\n') }}</textarea>
+      </div>
+
+    </div>
+
+    <div class="settings-footer">
+      <button type="submit" class="btn btn-primary">Save ICP Settings</button>
+    </div>
+
+  </form>
+</div>
+{% endblock %}

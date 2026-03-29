@@ -29,14 +29,15 @@ You are evaluating a free trial user to determine how the GTM team should respon
 
 **High fit:**
 - Title: Operations Manager, Facilities Director, Maintenance Manager, Plant Manager, VP of Operations, Reliability Engineer, Head of Facilities, Director of Plant Operations, Head of Manufacturing Ops
-- Industry: manufacturing, facilities management, healthcare, logistics/warehousing, food and beverage, energy/utilities
-- Company size: 100–2,500 employees
+- Industry: manufacturing, facilities management, healthcare, logistics/warehousing, food and beverage, energy/utilities, hospitality
+- Company size: 100–1,000 employees
 - Current solution: spreadsheets, legacy CMMS, nothing formal
+- Geography: Canada or international geography is a mild positive fit signal — these accounts convert at a higher SAO rate per lead than the US average
 
 **Low fit (disqualifiers):**
 - Industry: retail, SaaS/tech, consumer
 - Title: IC-level or no maintenance/facilities mandate (HR, IT, finance, customer success)
-- Company size: 3,000+ employees (enterprise, different sales motion)
+- Company size: 1,001+ employees (above mid-market, different sales motion)
 - Inbound source: Zapier / Integrations (typically non-ICP signups inflating MQL counts)
 
 ## Behavioral Engagement Criteria

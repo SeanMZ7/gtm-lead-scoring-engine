@@ -1,79 +1,78 @@
-company_name,contact_name,title,industry,company_size,recent_signal,website_visits_last_30_days,current_solution,notes,score,reason,outreach_email
-Apex Precision Manufacturing,Diana Ruiz,Director of Facilities,Manufacturing,850,Posted job for Maintenance Coordinator,47,Spreadsheets + paper work orders,Team managing 3 plants; mentioned pain around reactive maintenance in LinkedIn comment,Hot,"Diana is a Director of Facilities at an 850-employee manufacturer managing 3 plants on spreadsheets, with multiple strong buying signals: a Maintenance Coordinator job posting, 47 website visits, and a LinkedIn comment about reactive maintenance pain — textbook ICP fit with clear intent.","Subject: Reactive maintenance across 3 plants on spreadsheets — there's a better way
+company_name,contact_name,title,industry,company_size,recent_signal,website_visits_last_30_days,current_solution,notes,lead_source_type,offer_type,inbound_channel,score,reason,priority_flag,outreach_email
+Apex Precision Manufacturing,Diana Ruiz,Director of Facilities,Manufacturing,850,Posted job for Maintenance Coordinator,47,Spreadsheets + paper work orders,Team managing 3 plants; mentioned pain around reactive maintenance in LinkedIn comment,Inbound,Demo Request,Google Ads,Hot,"Diana is a Director of Facilities at an 850-person manufacturer managing 3 plants, running on spreadsheets and paper work orders, actively hiring a Maintenance Coordinator, and submitted a Demo Request after publicly citing reactive maintenance pain — textbook strong ICP fit with multiple compounding buying signals.",HIGH PRIORITY — respond within 2 hours,"Subject: Reactive maintenance at Apex — a few thoughts
 
 Hi Diana,
 
-I came across your LinkedIn comment about the challenges of reactive maintenance and noticed Apex Precision is hiring a Maintenance Coordinator — it sounds like your team is feeling the strain of managing three plants with spreadsheets and paper work orders.
+I saw your comment about reactive maintenance and noticed Apex is hiring a Maintenance Coordinator across your three plants. That combination usually means the current system — spreadsheets and paper work orders — is starting to break under the load.
 
-That's exactly the breaking point where a lot of facilities directors we work with decide to make a change. We helps teams like yours move from firefighting to planned maintenance with a mobile-first CMMS that's easy to roll out — no six-month implementation.
+We work with facilities teams in similar spots to get ahead of unplanned downtime without overhauling everything at once. A lot of our customers cut reactive work orders by 30-40% in the first few months.
 
-Would you be open to a 15-minute call this week to see if it's worth exploring? Happy to share how a few similar multi-plant manufacturers made the switch.
+Would a 15-minute call this week be worth your time? Happy to keep it practical.
 
-Best,
 [Your Name]"
-Riverfront Cold Storage,Marcus Webb,VP of Operations,Facilities Management,320,None,12,Legacy CMMS (Maximo),Contract renewal on their current system coming up in Q3; may be open to switching,Hot,Marcus is a senior operations leader at a mid-market facilities company (320 employees) running a legacy CMMS (Maximo) with a Q3 contract renewal approaching and 12 website visits in the last 30 days — strong ICP fit combined with clear buying signals.,"Subject: Riverfront's Maximo renewal — worth a quick look before Q3?
+Riverfront Cold Storage,Marcus Webb,VP of Operations,Facilities Management,320,None,12,Legacy CMMS (Maximo),Contract renewal on their current system coming up in Q3; may be open to switching,Outbound,Demo Request,Outbound,Hot,"Marcus is a VP of Operations at a mid-market facilities company (320 employees) using a legacy CMMS with a contract renewal in Q3, making this a high-fit lead with a clear and time-sensitive switching opportunity reinforced by a Demo Request.",HIGH PRIORITY — respond within 2 hours,"Subject: Switching from Maximo before your Q3 renewal
 
 Hi Marcus,
 
-I noticed Riverfront Cold Storage may be coming up on a contract renewal for your current CMMS. Having talked with a lot of ops leaders at facilities companies your size, the story is usually the same — Maximo does the job, but the overhead, licensing costs, and clunky mobile experience make it hard to justify re-signing without at least exploring what's changed in the market.
+I noticed Riverfront Cold Storage is coming up on a contract renewal with Maximo this quarter. A lot of ops leaders we talk to find Maximo hard to justify at your scale - it's expensive to maintain and often requires IT just to pull a basic report.
 
-_____ was built for teams like yours: straightforward work order management, real-time asset tracking, and a mobile-first experience that technicians actually want to use — without the heavyweight implementation.
+We work with mid-size facilities and storage operations that have made the switch to a more modern, AI-powered CMMS - typically cutting unplanned downtime and getting their teams up and running in weeks, not months.
 
-Would it make sense to grab 15 minutes before your renewal timeline heats up? Happy to share what the switch has looked like for a few other cold storage and facilities operations.
+Would a quick 15-minute call be worth it before you finalize anything for Q3?
 
-Best,
 [Your Name]"
-BrightPath Surgical,Tamara Chen,Facilities Manager,Healthcare,1200,Evaluated two CMMS vendors in past 60 days,89,Unknown,High site engagement; healthcare compliance is a known pain point for this segment,Hot,"Tamara is a Facilities Manager (decision-maker title) at a 1,200-employee healthcare company that has actively evaluated two CMMS vendors in the past 60 days and shows very high website engagement (89 visits), indicating strong buying intent.","Subject: CMMS evaluation at BrightPath Surgical — quick thought
+BrightPath Surgical,Tamara Chen,Facilities Manager,Healthcare,1200,Evaluated two CMMS vendors in past 60 days,89,Unknown,High site engagement; healthcare compliance is a known pain point for this segment,Inbound,Free Trial,Organic / Direct,Hot,"Tamara is a Facilities Manager at a healthcare company actively evaluating CMMS vendors in the past 60 days, with high site engagement (89 visits) and an organic/direct inbound channel — strong ICP fit with clear buying intent, slightly tempered by company size at 1,200 employees (just above mid-market ceiling) and a Free Trial rather than Demo Request offer.",,"Subject: Keeping BrightPath Surgical's facilities audit-ready
 
 Hi Tamara,
 
-I noticed BrightPath Surgical has been exploring CMMS options recently, and given the compliance demands that come with managing facilities in a surgical environment, I imagine finding the right fit matters a lot more than just checking a box.
+I noticed you've been exploring CMMS options recently, and given BrightPath's environment, I'd imagine compliance documentation and equipment uptime are never far from your mind.
 
-At ____, we work with a number of healthcare facilities teams who were dealing with audit-readiness headaches and reactive maintenance cycles before switching to our platform. Things like automated PM scheduling, real-time asset histories, and digital compliance trails tend to resonate most with folks in your seat.
+A lot of facilities teams in healthcare tell us the hardest part isn't doing the maintenance work, it's proving it happened, in the right format, when an auditor asks.
 
-Would you be open to a 15-minute call this week to compare notes on what you've seen so far in your evaluation? Happy to share what's worked for similar orgs — no pressure, just a candid conversation.
+We built our platform specifically to close that gap, with automated work order records, PM scheduling, and compliance-ready reporting out of the box.
+
+Would a quick 15-minute call be useful to compare notes on what you've seen so far in your evaluation?
 
 Best,
-Team"
-Summit Retail Group,Jordan Blake,Regional Store Manager,Retail,2800,None,3,Point of sale system,Multi-location retail; no maintenance ops mandate and wrong buyer title,Cold,"Summit Retail Group is in the retail industry (disqualifier), Jordan's title of Regional Store Manager has no budget authority over maintenance or facilities operations, company size exceeds the 2,500-employee mid-market cap, there are no buying signals, and their current solution is a POS system with no connection to CMMS needs.",
-Vanguard Logistics LLC,Keith Odom,Plant Manager,Logistics / Warehousing,670,"LinkedIn post about ""digitizing our maintenance workflow""",31,Excel + email,Direct signal: publicly posted about the pain we solves,Hot,"Keith is a Plant Manager (decision-maker title) at a 670-employee logistics company currently using Excel + email, and he publicly posted on LinkedIn about digitizing maintenance workflows — a textbook buying signal aligned with core value prop.","Subject: Your maintenance workflow post hit close to home, Keith
+[Your Name]"
+Summit Retail Group,Jordan Blake,Regional Store Manager,Retail,2800,None,3,Point of sale system,Multi-location retail; no maintenance ops mandate and wrong buyer title,Inbound,Content Download,Google Ads,Cold,"Retail is an explicitly disqualified industry, the company size of 2800 exceeds the mid-market ceiling, Jordan's title carries no maintenance or facilities mandate, and the current solution is a point-of-sale system with no connection to asset management or maintenance workflows.",,
+Vanguard Logistics LLC,Keith Odom,Plant Manager,Logistics / Warehousing,670,"LinkedIn post about ""digitizing our maintenance workflow""",31,Excel + email,Direct signal: publicly posted about the pain we solve,Outbound,Organic Visit,Organic / Direct,Hot,"Keith is a Plant Manager at a 670-person logistics company actively using Excel and email for maintenance — directly within ICP — and publicly posted on LinkedIn about digitizing their maintenance workflow, which is a direct signal of the exact pain this product solves, reinforced by 31 organic site visits.",,"Subject: Vanguard's maintenance workflow — saw your LinkedIn post
 
 Hi Keith,
 
-I saw your LinkedIn post about digitizing the maintenance workflow at Vanguard Logistics — it caught my eye because that exact shift from Excel and email to a structured system is something we help mid-size logistics operations navigate every day.
+I came across your post about digitizing Vanguard's maintenance workflow and it caught my attention right away.
 
-At _____, we make it straightforward for Plant Managers like you to move from reactive, scattered tracking to a single platform for work orders, asset history, and preventive maintenance — without a painful rollout.
+Running maintenance on Excel and email at 670 employees creates real risk — missed PMs, no audit trail, and technicians chasing information instead of fixing equipment. We work with logistics and warehousing operations in exactly that situation and help them get off spreadsheets without a six-month implementation.
 
-Given where you are in the process, I think a quick conversation could be genuinely useful. Would you be open to 15 minutes this week or next to swap notes?
+Would it be worth a quick 15-minute call to see if what we're doing is even relevant to where Vanguard is headed?
 
-Either way, appreciate you sharing the post — it resonated.
-
-Best,
 [Your Name]"
-Clearwater Municipal Utilities,Sandra Howell,Infrastructure Manager,Government / Utilities,410,RFP posted for CMMS software,58,Home-built tracking tool,Active RFP in market — highly motivated but gov procurement is slow,Cold,"Despite a strong buying signal (active RFP for CMMS) and relevant title, the company operates in Government / Utilities, which is a disqualified industry due to slow procurement cycles that misalign with 's mid-market sales motion.",
-Nova Snack Co.,Brian Tran,Head of Manufacturing Ops,Manufacturing,290,Hired new Maintenance Supervisor last month,19,Nothing formal,Small but growing food manufacturer; new hire suggests they are building out maintenance function,Hot,"Brian is a senior operations leader at a mid-market manufacturer (290 employees) with no formal CMMS, and the recent Maintenance Supervisor hire plus 19 website visits strongly signal they're actively building out a maintenance function and evaluating solutions.","Subject: Building out maintenance at Nova Snack Co.?
+Clearwater Municipal Utilities,Sandra Howell,Infrastructure Manager,Government / Utilities,410,RFP posted for CMMS software,58,Home-built tracking tool,Active RFP in market — highly motivated but gov procurement is slow,Inbound,Free Trial,Microsoft Ads,Cold,"Despite a strong buying signal (active CMMS RFP) and relevant title, Clearwater Municipal Utilities falls squarely in the government industry, which is an explicit disqualifier regardless of other fit factors.",,
+Nova Snack Co.,Brian Tran,Head of Manufacturing Ops,Manufacturing,290,Hired new Maintenance Supervisor last month,19,Nothing formal,Small but growing food manufacturer; new hire suggests they are building out maintenance function,Inbound,Free Trial,Google Ads,Hot,"Brian is Head of Manufacturing Ops at a 290-person food manufacturer with no formal CMMS, a recent maintenance supervisor hire signals they're actively building out a maintenance function, and a Free Trial inbound request confirms active evaluation intent.",,"Subject: Building out maintenance at Nova Snack Co. -- a few thoughts
 
 Hi Brian,
 
-I noticed Nova Snack Co. recently brought on a new Maintenance Supervisor — congrats on the hire. That kind of investment usually means the team is moving past spreadsheets and fire-drill maintenance toward something more structured.
+I saw you recently brought on a new Maintenance Supervisor -- congrats on the grow. When teams start formalizing maintenance for the first time, the first challenge is usually getting everyone off spreadsheets and onto something that actually scales with the team.
 
-That's exactly where _____ tends to help. We work with growing manufacturers like yours to stand up a lightweight CMMS quickly — giving your new supervisor clear workflows, asset tracking, and visibility into work orders from day one, without a heavy implementation.
+We work with food manufacturers in a similar spot -- no formal system, growing fast, and needing visibility into work orders and assets without a heavy implementation lift.
 
-Would it make sense to grab 15 minutes this week so I can share how a few similar-sized food manufacturers handled this exact transition? Happy to work around your schedule.
+Would a quick 15-minute call be useful to share what's worked for similar teams? Happy to keep it practical.
 
 Best,
 [Your Name]"
-Pinnacle SaaS Corp,Emily Vargas,Head of Customer Success,SaaS / Technology,180,None,2,Salesforce,Completely off ICP — software company with no facilities or maintenance use case,Cold,"Pinnacle SaaS Corp is in the SaaS/Technology industry (a disqualified industry), the title Head of Customer Success is off-function with no connection to maintenance or facilities operations, and there are no buying signals.",
-Hartwell Paper & Packaging,Robert Kim,Maintenance Manager,Manufacturing,1500,Attended ______ webinar last week,74,IBM Maximo (outdated version),Very warm — attended our content; Maximo pain is well documented in the market,Hot,"Robert is a Maintenance Manager at a 1,500-employee manufacturer running an outdated IBM Maximo instance, and he attended an ____ webinar last week with 74 website visits in 30 days — textbook ICP fit with multiple strong buying signals.","Subject: Replacing Maximo shouldn't feel like a second full-time job
+Pinnacle SaaS Corp,Emily Vargas,Head of Customer Success,SaaS / Technology,180,None,2,Salesforce,Completely off ICP — software company with no facilities or maintenance use case,Inbound,Zapier / Integrations,Zapier / Integrations,Cold,"Emily's title (Head of Customer Success) carries no maintenance or facilities budget authority, the company is a SaaS/technology firm which is an explicit industry disqualifier, and the Zapier/Integrations inbound channel is a known soft disqualifier that inflates MQL counts without conversion potential.",,
+Hartwell Paper & Packaging,Robert Kim,Maintenance Manager,Manufacturing,1500,Attended ____ webinar last week,74,IBM Maximo (outdated version),Very warm — attended our content; Maximo pain is well documented in the market,Inbound,Demo Request,LinkedIn Ads,Hot,"Robert is a Maintenance Manager at a manufacturing company actively using an outdated Maximo instance, submitted a Demo Request after attending a webinar and visiting the site 74 times in 30 days — strong buying intent despite company size sitting just above the core ICP range and a neutral LinkedIn Ads channel.",HIGH PRIORITY — respond within 2 hours,"Subject: Replacing Maximo without the usual headaches
 
 Hi Robert,
 
-I noticed you joined our webinar last week — thanks for spending time with us. Given your role at Hartwell Paper & Packaging, I imagine you're dealing with some of the classic pain points that come with running an older version of Maximo: clunky work order workflows, limited mobile access for your techs on the floor, and reporting that takes way more effort than it should.
+Saw you attended our webinar last week and requested a demo — appreciate you taking the time.
 
-A lot of the maintenance leaders we work with at mid-size manufacturers made the switch to ______ specifically because they needed something their teams would actually use — without a 12-month implementation nightmare.
+A lot of maintenance managers we talk to at paper and packaging facilities are stuck in the same spot: Maximo technically works, but it's slow, expensive to maintain, and the team avoids it. Wrench time suffers, and PMs slip through the cracks.
 
-Would you be open to a quick 15-minute call this week to see if what we're doing lines up with what you're looking for? No pressure, just a conversation.
+We built our platform specifically to replace legacy CMMS setups without a six-month implementation nightmare.
+
+Worth a 15-minute call to see if it's a fit for Hartwell? Happy to work around your schedule.
 
 Best,
-Team"
-Cascade Property Services,Nia Foster,Operations Director,Facilities Management,230,None,8,ServiceChannel,Mid-market FM company; right buyer and industry but no active signal yet,Warm,"Nia is an ideal buyer (Operations Director) at a mid-market facilities management company (230 employees), but there is no active buying signal beyond moderate website visits, and they already use ServiceChannel rather than spreadsheets or a legacy CMMS, reducing urgency.",
+[Your Name]"
+Cascade Property Services,Nia Foster,Operations Director,Facilities Management,230,None,8,ServiceChannel,Mid-market FM company; right buyer and industry but no active signal yet,Outbound,Content Download,Outbound,Warm,"Nia is a strong ICP title in a target industry at the right company size, but she's on an existing solution (ServiceChannel), came in via outbound with no active buying signal, and the content download offer type adds no urgency.",,

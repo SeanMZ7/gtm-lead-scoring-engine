@@ -24,7 +24,6 @@ Date: March 20, 2026
 - pyenv python version conflict — fixed by using `python3` explicitly
 - pip externally managed error — fixed by creating a virtual environment (`python3 -m venv venv`)
 - API credits not loaded — fixed by adding credits at console.anthropic.com
-- API key exposed in Claude Code chat — rotated immediately at console.anthropic.com
 
 ---
 

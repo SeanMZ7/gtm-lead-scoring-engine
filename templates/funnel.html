@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block title %}Full Funnel — GTM Brain{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Full Funnel</h1>
+    <p class="page-subtitle">Unified GTM intelligence across leads and trials</p>
+  </div>
+  <form method="POST" action="{{ url_for('run_funnel') }}" class="run-form">
+    <button type="submit" class="btn btn-accent">Run Full Funnel Engine</button>
+  </form>
+</div>
+
+{% if rows %}
+  <!-- Summary Bar -->
+  <div class="funnel-summary-bar">
+    <div class="fsb-item">
+      <span class="fsb-label">Total Scored</span>
+      <span class="fsb-value">{{ summary.total }}</span>
+    </div>
+    <div class="fsb-divider"></div>
+    <div class="fsb-item fsb-ae">
+      <span class="fsb-label">AE Fast-Track</span>
+      <span class="fsb-value">{{ summary.ae }}</span>
+    </div>
+    <div class="fsb-divider"></div>
+    <div class="fsb-item fsb-bdr">
+      <span class="fsb-label">BDR Sequence</span>
+      <span class="fsb-value">{{ summary.bdr }}</span>
+    </div>
+    <div class="fsb-divider"></div>
+    <div class="fsb-item fsb-cs">
+      <span class="fsb-label">CS Monitor</span>
+      <span class="fsb-value">{{ summary.cs }}</span>
+    </div>
+    <div class="fsb-divider"></div>
+    <div class="fsb-item fsb-suppress">
+      <span class="fsb-label">Suppressed</span>
+      <span class="fsb-value">{{ summary.suppress }}</span>
+    </div>
+  </div>
+
+  <div class="table-controls">
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterRows('all', this)">All</button>
+      <button class="filter-btn filter-ae" onclick="filterRows('ae', this)">AE Fast-Track</button>
+      <button class="filter-btn filter-bdr" onclick="filterRows('bdr', this)">BDR Sequence</button>
+      <button class="filter-btn filter-cs" onclick="filterRows('cs', this)">CS Monitor</button>
+      <button class="filter-btn filter-suppress" onclick="filterRows('suppress', this)">Suppressed</button>
+    </div>
+    <div class="table-controls-right">
+      <button class="btn-tool" onclick="exportTableCSV('funnel-table','funnel.csv')">&#8681; Export CSV</button>
+      <div class="col-picker">
+        <button class="col-picker-btn" onclick="toggleColPicker(this)">Columns &#9662;</button>
+        <div class="col-picker-dropdown" style="display:none;">
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'funnel-table',0)"> Lead Type</label>
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'funnel-table',1)"> Company</label>
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'funnel-table',2)"> Contact</label>
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'funnel-table',3)"> Title</label>
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'funnel-table',4)"> Routing Action</label>
+          <label><input type="checkbox" checked onchange="toggleColumn(this,'funnel-table',5)"> Reason</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <table class="data-table" id="funnel-table">
+      <colgroup><col><col><col><col><col><col><col></colgroup>
+      <thead>
+        <tr>
+          <th>Lead Type</th>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Title</th>
+          <th>Routing Action</th>
+          <th>Reason</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr class="{{ row.row_class }} data-row"
+            data-routing="{{ row.routing_key }}"
+            id="row-{{ loop.index }}"
+            {% if row.has_draft %}data-draft-target="draft-{{ loop.index }}"{% endif %}>
+          <td><span class="type-badge type-{{ row.lead_type_badge | lower }}">{{ row.lead_type_badge }}</span></td>
+          <td><strong>{{ row.company_name }}</strong></td>
+          <td>{{ row.contact_name }}</td>
+          <td>{{ row.title }}</td>
+          <td>{{ row.routing_action }}</td>
+          <td class="reason-cell">{{ row.reason }}</td>
+          <td class="action-cell">
+            {% if row.has_draft %}
+            <button class="toggle-btn" onclick="toggleDraft('draft-{{ loop.index }}', this)">View email draft</button>
+            {% endif %}
+          </td>
+        </tr>
+        {% if row.has_draft %}
+        <tr class="draft-row {{ row.row_class }}" id="draft-{{ loop.index }}" style="display:none;">
+          <td colspan="7">
+            <div class="draft-container">
+              <div class="draft-label">Outreach Draft</div>
+              <textarea class="draft-text" readonly>{{ row.outreach_draft }}</textarea>
+            </div>
+          </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+{% else %}
+  <div class="empty-state">
+    <div class="empty-icon">&#9660;</div>
+    <h2>No full funnel data yet</h2>
+    <p>Click <strong>Run Full Funnel Engine</strong> to score all leads and trials in one pass.</p>
+    <form method="POST" action="{{ url_for('run_funnel') }}" class="run-form" style="margin-top:1.5rem;">
+      <button type="submit" class="btn btn-accent">Run Full Funnel Engine</button>
+    </form>
+  </div>
+{% endif %}
+{% endblock %}

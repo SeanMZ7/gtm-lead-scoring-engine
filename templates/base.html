@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}GTM Brain{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Loading Overlay -->
+  <div id="loading-overlay" class="loading-overlay" style="display:none;">
+    <div class="loading-box">
+      <div class="loading-progress-track">
+        <div class="loading-progress-bar"></div>
+      </div>
+      <p class="loading-status" id="loading-status">Initializing engine...</p>
+      <div class="loading-meta">
+        <span id="loading-elapsed">0s</span> elapsed &nbsp;&mdash;&nbsp; Claude is scoring each record individually
+      </div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-mark">GTM</div>
+        <div class="logo-text">
+          <span class="logo-title">GTM Brain</span>
+          <span class="logo-sub">AI Intelligence Layer</span>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="{{ url_for('dashboard') }}" class="nav-link {% if request.endpoint == 'dashboard' %}active{% endif %}">
+            <span class="nav-icon">&#9685;</span> Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('leads') }}" class="nav-link {% if request.endpoint == 'leads' %}active{% endif %}">
+            <span class="nav-icon">&#9432;</span> Lead Scoring
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('trials') }}" class="nav-link {% if request.endpoint == 'trials' %}active{% endif %}">
+            <span class="nav-icon">&#9654;</span> Trial Conversion
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('funnel') }}" class="nav-link {% if request.endpoint == 'funnel' %}active{% endif %}">
+            <span class="nav-icon">&#9660;</span> Full Funnel
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('settings') }}" class="nav-link {% if request.endpoint == 'settings' %}active{% endif %}">
+            <span class="nav-icon">&#9881;</span> ICP Settings
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <span class="model-badge">claude-sonnet-4-6</span>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div class="flash-messages">
+            {% for category, message in messages %}
+              <div class="flash flash-{{ category }}">
+                <pre>{{ message }}</pre>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+
+  <script>
+    // -----------------------------------------------------------------------
+    // Loading overlay with elapsed timer and rotating messages
+    // -----------------------------------------------------------------------
+    var LOADING_MESSAGES = [
+      "Analyzing firmographic signals...",
+      "Scoring behavioral engagement...",
+      "Drafting personalized outreach...",
+      "Generating routing decisions...",
+      "Evaluating ICP fit criteria...",
+      "Processing buying signals...",
+    ];
+    var _loadingTimer = null;
+    var _loadingSeconds = 0;
+    var _loadingMsgIdx = 0;
+
+    function startLoading() {
+      _loadingSeconds = 0;
+      _loadingMsgIdx = 0;
+      var statusEl = document.getElementById('loading-status');
+      var elapsedEl = document.getElementById('loading-elapsed');
+      statusEl.style.opacity = '1';
+      statusEl.textContent = LOADING_MESSAGES[0];
+      elapsedEl.textContent = '0s';
+      document.getElementById('loading-overlay').style.display = 'flex';
+
+      _loadingTimer = setInterval(function () {
+        _loadingSeconds++;
+        elapsedEl.textContent = _loadingSeconds + 's';
+        if (_loadingSeconds % 5 === 0) {
+          _loadingMsgIdx = (_loadingMsgIdx + 1) % LOADING_MESSAGES.length;
+          statusEl.style.opacity = '0';
+          setTimeout(function () {
+            statusEl.textContent = LOADING_MESSAGES[_loadingMsgIdx];
+            statusEl.style.opacity = '1';
+          }, 250);
+        }
+      }, 1000);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.run-form').forEach(function (form) {
+        form.addEventListener('submit', function () { startLoading(); });
+      });
+    });
+
+    // -----------------------------------------------------------------------
+    // Column picker
+    // -----------------------------------------------------------------------
+    function toggleColPicker(btn) {
+      var dropdown = btn.nextElementSibling;
+      var isOpen = dropdown.style.display !== 'none';
+      document.querySelectorAll('.col-picker-dropdown').forEach(function (d) {
+        d.style.display = 'none';
+      });
+      if (!isOpen) dropdown.style.display = 'block';
+    }
+
+    function toggleColumn(checkbox, tableId, colIndex) {
+      var table = document.getElementById(tableId);
+      var cols = table.querySelectorAll('colgroup col');
+      if (cols[colIndex]) {
+        cols[colIndex].style.visibility = checkbox.checked ? '' : 'collapse';
+      }
+    }
+
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.col-picker')) {
+        document.querySelectorAll('.col-picker-dropdown').forEach(function (d) {
+          d.style.display = 'none';
+        });
+      }
+    });
+
+    // -----------------------------------------------------------------------
+    // Row filter
+    // -----------------------------------------------------------------------
+    function filterRows(filter, btn) {
+      document.querySelectorAll('.filter-btn').forEach(function (b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+
+      document.querySelectorAll('tr.data-row').forEach(function (row) {
+        var routing = row.dataset.routing;
+        var show = (filter === 'all' || routing === filter);
+        row.style.display = show ? '' : 'none';
+        // Hide the paired draft row if filtering out
+        var draftTarget = row.dataset.draftTarget;
+        if (draftTarget) {
+          var draftRow = document.getElementById(draftTarget);
+          if (draftRow && !show) draftRow.style.display = 'none';
+        }
+      });
+    }
+
+    // -----------------------------------------------------------------------
+    // Export visible table to CSV
+    // -----------------------------------------------------------------------
+    function exportTableCSV(tableId, filename) {
+      var table = document.getElementById(tableId);
+      var cols = Array.from(table.querySelectorAll('colgroup col'));
+      var rows = [];
+
+      // Determine which column indices are visible and have a header label
+      var visibleIndices = [];
+      var headers = [];
+      table.querySelectorAll('thead th').forEach(function (th, i) {
+        var label = th.textContent.trim();
+        if (!label) return; // skip the empty action column
+        if (cols[i] && cols[i].style.visibility === 'collapse') return;
+        visibleIndices.push(i);
+        headers.push('"' + label.replace(/"/g, '""') + '"');
+      });
+      rows.push(headers.join(','));
+
+      // Data rows — skip hidden rows and draft rows
+      table.querySelectorAll('tbody tr.data-row').forEach(function (tr) {
+        if (tr.style.display === 'none') return;
+        var tds = tr.querySelectorAll('td');
+        var cells = visibleIndices.map(function (i) {
+          var text = tds[i] ? tds[i].textContent.trim().replace(/"/g, '""') : '';
+          return '"' + text + '"';
+        });
+        rows.push(cells.join(','));
+      });
+
+      var csv = '\uFEFF' + rows.join('\r\n');
+      var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    // -----------------------------------------------------------------------
+    // Draft row toggle
+    // -----------------------------------------------------------------------
+    function toggleDraft(id, btn) {
+      var row = document.getElementById(id);
+      if (row.style.display === 'none') {
+        row.style.display = 'table-row';
+        btn.textContent = 'Hide draft';
+      } else {
+        row.style.display = 'none';
+        btn.textContent = 'View email draft';
+      }
+    }
+  </script>
+</body>
+</html>
