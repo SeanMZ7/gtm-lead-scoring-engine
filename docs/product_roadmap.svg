@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" width="1400" height="700" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="card-shadow" x="-5%" y="-5%" width="115%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="8" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="700" fill="#ffffff"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- TITLE                                       -->
+  <!-- ═══════════════════════════════════════════ -->
+  <text x="700" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Product Roadmap</text>
+  <text x="700" y="62" text-anchor="middle" font-size="13" fill="#6b7280">Four phases from MVP to autonomous GTM agent</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- TIMELINE LINE                               -->
+  <!-- ═══════════════════════════════════════════ -->
+  <line x1="70" y1="180" x2="1330" y2="180" stroke="#d1d5db" stroke-width="2"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- MILESTONE CIRCLES                           -->
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- V1 green -->
+  <circle cx="200" cy="180" r="16" fill="#1a7a4a"/>
+  <text x="200" y="185" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">1</text>
+
+  <!-- V2 purple -->
+  <circle cx="540" cy="180" r="16" fill="#5b3fa0"/>
+  <text x="540" y="185" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">2</text>
+
+  <!-- V3 amber -->
+  <circle cx="880" cy="180" r="16" fill="#b45309"/>
+  <text x="880" y="185" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">3</text>
+
+  <!-- V4 blue -->
+  <circle cx="1220" cy="180" r="16" fill="#185fa5"/>
+  <text x="1220" y="185" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">4</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- TIME LABELS (above circles)                 -->
+  <!-- ═══════════════════════════════════════════ -->
+  <text x="200" y="155" text-anchor="middle" font-size="11" font-weight="600" fill="#6b7280">March 2026 — Shipped</text>
+  <text x="540" y="155" text-anchor="middle" font-size="11" font-weight="600" fill="#6b7280">Weeks 1-2</text>
+  <text x="880" y="155" text-anchor="middle" font-size="11" font-weight="600" fill="#6b7280">Weeks 3-6</text>
+  <text x="1220" y="155" text-anchor="middle" font-size="11" font-weight="600" fill="#6b7280">Months 2-3</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- DASHED CONNECTOR LINES                      -->
+  <!-- ═══════════════════════════════════════════ -->
+  <line x1="200" y1="196" x2="200" y2="222" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="540" y1="196" x2="540" y2="222" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="880" y1="196" x2="880" y2="222" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="1220" y1="196" x2="1220" y2="222" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- PHASE CARDS                                                     -->
+  <!-- Cards: x=[40, 380, 720, 1060], y=222, w=320, h=278             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <!-- ─────────────── V1 CARD ─────────────── -->
+  <rect x="40" y="222" width="320" height="278" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <!-- Top color bar -->
+  <rect x="40" y="222" width="320" height="4" rx="2" fill="#1a7a4a"/>
+  <!-- Badge -->
+  <rect x="56" y="238" width="48" height="22" rx="11" fill="#1a7a4a"/>
+  <text x="80" y="253" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.5">LIVE</text>
+  <!-- Title -->
+  <text x="200" y="282" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">GTM Brain V1</text>
+  <!-- Subtitle -->
+  <text x="200" y="299" text-anchor="middle" font-size="12" fill="#6b7280">AI intelligence layer —</text>
+  <text x="200" y="314" text-anchor="middle" font-size="12" fill="#6b7280">running on mock data</text>
+  <!-- Divider -->
+  <line x1="60" y1="325" x2="340" y2="325" stroke="#f3f4f6" stroke-width="1"/>
+  <!-- Bullets -->
+  <text x="58" y="341" text-anchor="start" font-size="12" fill="#374151">• ICP fit scoring for leads and outbound</text>
+  <text x="58" y="359" text-anchor="start" font-size="12" fill="#374151">• Two-dimensional trial user scoring</text>
+  <text x="58" y="377" text-anchor="start" font-size="12" fill="#374151">• Four-tier routing engine</text>
+  <text x="58" y="395" text-anchor="start" font-size="12" fill="#374151">• Personalized outreach drafting</text>
+  <text x="58" y="413" text-anchor="start" font-size="12" fill="#374151">• Flask web UI — five pages</text>
+  <text x="58" y="431" text-anchor="start" font-size="12" fill="#374151">• ICP settings editor — no code required</text>
+
+  <!-- ─────────────── V2 CARD ─────────────── -->
+  <rect x="380" y="222" width="320" height="278" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <rect x="380" y="222" width="320" height="4" rx="2" fill="#5b3fa0"/>
+  <!-- Badge -->
+  <rect x="396" y="238" width="52" height="22" rx="11" fill="#5b3fa0"/>
+  <text x="422" y="253" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.5">NEXT</text>
+  <!-- Title -->
+  <text x="540" y="282" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">Live data integration</text>
+  <!-- Subtitle -->
+  <text x="540" y="299" text-anchor="middle" font-size="12" fill="#6b7280">Replace CSVs with live</text>
+  <text x="540" y="314" text-anchor="middle" font-size="12" fill="#6b7280">API connections</text>
+  <!-- Divider -->
+  <line x1="400" y1="325" x2="680" y2="325" stroke="#f3f4f6" stroke-width="1"/>
+  <!-- Bullets -->
+  <text x="398" y="341" text-anchor="start" font-size="12" fill="#374151">• HubSpot MQL webhook — score every</text>
+  <text x="412" y="357" text-anchor="start" font-size="12" fill="#374151">lead in real time</text>
+  <text x="398" y="375" text-anchor="start" font-size="12" fill="#374151">• Mixpanel nightly export — trial users</text>
+  <text x="412" y="391" text-anchor="start" font-size="12" fill="#374151">scored each morning</text>
+  <text x="398" y="409" text-anchor="start" font-size="12" fill="#374151">• ZoomInfo enrichment — verified</text>
+  <text x="412" y="425" text-anchor="start" font-size="12" fill="#374151">firmographic data</text>
+  <text x="398" y="443" text-anchor="start" font-size="12" fill="#374151">• Salesforce sync — routing decisions</text>
+  <text x="412" y="459" text-anchor="start" font-size="12" fill="#374151">in existing workflow</text>
+
+  <!-- ─────────────── V3 CARD ─────────────── -->
+  <rect x="720" y="222" width="320" height="278" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <rect x="720" y="222" width="320" height="4" rx="2" fill="#b45309"/>
+  <!-- Badge -->
+  <rect x="736" y="238" width="74" height="22" rx="11" fill="#b45309"/>
+  <text x="773" y="253" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.5">PLANNED</text>
+  <!-- Title -->
+  <text x="880" y="282" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">Intelligence expansion</text>
+  <!-- Subtitle -->
+  <text x="880" y="299" text-anchor="middle" font-size="12" fill="#6b7280">Proactive signals and</text>
+  <text x="880" y="314" text-anchor="middle" font-size="12" fill="#6b7280">competitive displacement</text>
+  <!-- Divider -->
+  <line x1="740" y1="325" x2="1020" y2="325" stroke="#f3f4f6" stroke-width="1"/>
+  <!-- Bullets -->
+  <text x="738" y="341" text-anchor="start" font-size="12" fill="#374151">• HG Insights — flag accounts running</text>
+  <text x="752" y="357" text-anchor="start" font-size="12" fill="#374151">legacy CMMS competitors</text>
+  <text x="738" y="375" text-anchor="start" font-size="12" fill="#374151">• MadKudu displacement — Claude</text>
+  <text x="752" y="391" text-anchor="start" font-size="12" fill="#374151">reasoning replaces static ML model</text>
+  <text x="738" y="409" text-anchor="start" font-size="12" fill="#374151">• Channel efficiency reporting —</text>
+  <text x="752" y="425" text-anchor="start" font-size="12" fill="#374151">Challenge 5 of the brief solved</text>
+  <text x="738" y="443" text-anchor="start" font-size="12" fill="#374151">• Feedback loop — rep outcomes refine</text>
+  <text x="752" y="459" text-anchor="start" font-size="12" fill="#374151">scoring criteria over time</text>
+
+  <!-- ─────────────── V4 CARD ─────────────── -->
+  <rect x="1060" y="222" width="320" height="278" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <rect x="1060" y="222" width="320" height="4" rx="2" fill="#185fa5"/>
+  <!-- Badge -->
+  <rect x="1076" y="238" width="82" height="22" rx="11" fill="#185fa5"/>
+  <text x="1117" y="253" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.5">ROADMAP</text>
+  <!-- Title -->
+  <text x="1220" y="282" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">Autonomous GTM agent</text>
+  <!-- Subtitle -->
+  <text x="1220" y="299" text-anchor="middle" font-size="12" fill="#6b7280">Decision support becomes</text>
+  <text x="1220" y="314" text-anchor="middle" font-size="12" fill="#6b7280">autonomous execution</text>
+  <!-- Divider -->
+  <line x1="1080" y1="325" x2="1360" y2="325" stroke="#f3f4f6" stroke-width="1"/>
+  <!-- Bullets -->
+  <text x="1078" y="341" text-anchor="start" font-size="12" fill="#374151">• n8n orchestration — replace subprocess</text>
+  <text x="1092" y="357" text-anchor="start" font-size="12" fill="#374151">calls with visual workflows</text>
+  <text x="1078" y="375" text-anchor="start" font-size="12" fill="#374151">• Multi-touch sequences — full cadence</text>
+  <text x="1092" y="391" text-anchor="start" font-size="12" fill="#374151">drafted, not just first touch</text>
+  <text x="1078" y="409" text-anchor="start" font-size="12" fill="#374151">• Voice agent — demo requests contacted</text>
+  <text x="1092" y="425" text-anchor="start" font-size="12" fill="#374151">within 5 minutes of form submit</text>
+  <text x="1078" y="443" text-anchor="start" font-size="12" fill="#374151">• Self-optimizing ICP — criteria evolve</text>
+  <text x="1092" y="459" text-anchor="start" font-size="12" fill="#374151">from closed-won outcomes</text>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- GUIDING PRINCIPLES STRIP                                        -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <text x="700" y="522" text-anchor="middle" font-size="11" font-weight="600" fill="#9ca3af" letter-spacing="1.5">GUIDING PRINCIPLES</text>
+
+  <rect x="40" y="530" width="1320" height="100" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+
+  <!-- Vertical dividers -->
+  <line x1="480" y1="548" x2="480" y2="614" stroke="#e5e7eb" stroke-width="1.5"/>
+  <line x1="920" y1="548" x2="920" y2="614" stroke="#e5e7eb" stroke-width="1.5"/>
+
+  <!-- Principle 1 -->
+  <text x="260" y="561" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Prompt over code</text>
+  <text x="260" y="580" text-anchor="middle" font-size="12" fill="#6b7280">Scoring criteria update in minutes,</text>
+  <text x="260" y="596" text-anchor="middle" font-size="12" fill="#6b7280">not engineering sprints</text>
+
+  <!-- Principle 2 -->
+  <text x="700" y="561" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Reps review, systems route</text>
+  <text x="700" y="580" text-anchor="middle" font-size="12" fill="#6b7280">Automation handles triage.</text>
+  <text x="700" y="596" text-anchor="middle" font-size="12" fill="#6b7280">Humans handle relationships.</text>
+
+  <!-- Principle 3 -->
+  <text x="1140" y="561" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">One operator, full-funnel</text>
+  <text x="1140" y="580" text-anchor="middle" font-size="12" fill="#6b7280">Inbound leads, outbound targets, and</text>
+  <text x="1140" y="596" text-anchor="middle" font-size="12" fill="#6b7280">trial users in one interface</text>
+
+</svg>
